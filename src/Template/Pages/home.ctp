@@ -45,6 +45,17 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <?= $this->Html->image('slogoblanco.svg', ["width"=>""]) ?>
             
             <h1>Escuela Juan Soñador</h1>
+            <h3>Bienvenido </h3>
+            
+            <?php 
+            
+            if ($auth) {
+                echo $auth['username'];
+            }
+            
+            ?>
+            
+            
         </div>
     </header>
     <div id="content">

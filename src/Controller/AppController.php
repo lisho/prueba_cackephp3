@@ -43,6 +43,17 @@ class AppController extends Controller
 
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
+        $this->loadComponent('Auth', [
+            'loginRedirect' => [
+                'controller' => 'Pages',
+                'action' => 'home'
+            ],
+            'logoutRedirect' => [
+                'controller' => 'Pages',
+                'action' => 'display',
+                'home'
+            ]
+        ]);
     }
 
     /**
@@ -53,10 +64,15 @@ class AppController extends Controller
      */
     public function beforeRender(Event $event)
     {
+        $this->Auth->allow(['index', 'view', 'display']);
+       
+        $this->set('auth', $this->Auth->user()); //Con esta linea pasamos $auth a la vista.
+      
         if (!array_key_exists('_serialize', $this->viewVars) &&
             in_array($this->response->type(), ['application/json', 'application/xml'])
         ) {
             $this->set('_serialize', true);
+
         }
     }
 }
