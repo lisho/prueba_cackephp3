@@ -1,11 +1,20 @@
-<div class="users form">
-<?= $this->Flash->render('auth') ?>
-<?= $this->Form->create() ?>
-    <fieldset>
-        <legend><?= __('Please enter your username and password') ?></legend>
-        <?= $this->Form->input('username') ?>
-        <?= $this->Form->input('password') ?>
-    </fieldset>
-<?= $this->Form->button(__('Login')); ?>
-<?= $this->Form->end() ?>
-</div>
+<!-- BOOTSTRAP NAVBAR - BARRA DE NAVEGACIÓN-->
+
+
+<header>
+    <div class="header-image">
+        <br>
+        <?php /*$this->Html->image('http://cakephp.org/img/cake-logo.png')*/ ?> 
+        <?= $this->Html->image('slogoblanco.svg', ["width"=>""]) ?>
+        
+        <h1>Escuela Juan Soñador</h1>
+        <h3>Bienvenido </h3>
+        
+        <?php 
+            if ($auth) {
+            echo $auth['username'];
+            }
+        ?>
+        
+    </div>
+</header>       

@@ -26,11 +26,36 @@ endif;
 
 $cakeDescription = 'CakePHP: the rapid development php framework';
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <?= $this->Html->charset() ?>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <?= $cakeDescription ?>
+    </title>
+    <?= $this->Html->meta('icon') ?>
+    <?= $this->Html->css('base.css') ?>
+    <?= $this->Html->css('cake.css') ?>
+    <?= $this->Html->css('jquery-ui.min.css') ?>
+    <?= $this->Html->css('jquery-ui.theme.min.css') ?>
+    <?= $this->Html->css('jquery-ui.structure.min.css') ?>
+    <?= $this->Html->script('jquery-ui.min.js') ?>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
 
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    
+</head>
+<body class="home">
     <header>
         <div class="header-image">
-            <br>
             <?php /*$this->Html->image('http://cakephp.org/img/cake-logo.png')*/ ?> 
             <?= $this->Html->image('slogoblanco.svg', ["width"=>""]) ?>
             
@@ -48,7 +73,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             
         </div>
     </header>
-    <div id="content" class="container">
+    <div id="content">
         <div class="row">
             <?php Debugger::checkSecurityKeys(); ?>
             <div id="url-rewriting-warning" class="columns large-12 url-rewriting checks">
@@ -191,5 +216,5 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </div>
     <footer>
     </footer>
-
-
+</body>
+</html>
