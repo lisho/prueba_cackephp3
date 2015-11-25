@@ -31,20 +31,17 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'); ?>
     <?= $this->Html->script(['bootstrap.min']) ?>
  
-   
 </head>
 
 <body class="home">
     
-     
-
     <div class="header-contenedor">
         <?= $this->element('menu'); ?>
     </div>
-    
+    <br><br>    
     <?= $this->Flash->render() ?>
-  <?= $this->fetch('content') ?>
-  
+
+      <?= $this->fetch('content') ?>
 
     <footer>
     </footer>

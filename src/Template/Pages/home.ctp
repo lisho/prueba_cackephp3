@@ -30,7 +30,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
     <header>
         <div class="header-image">
-            <br>
+            
             <?php /*$this->Html->image('http://cakephp.org/img/cake-logo.png')*/ ?> 
             <?= $this->Html->image('slogoblanco.svg', ["width"=>""]) ?>
             
