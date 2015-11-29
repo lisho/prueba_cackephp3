@@ -5,6 +5,7 @@
     
     <div class="header-image">
         <br>
+
         <?php /*$this->Html->image('http://cakephp.org/img/cake-logo.png')*/ ?> 
         <?= $this->Html->image('slogoblanco.svg', ["width"=>""]) ?>
         
@@ -13,9 +14,10 @@
         
         <?php 
             if ($auth) {
-             echo 'Ya estás logueado'.$auth['username'];
+             echo ucwords($auth['username']).', ya estás logueado';
             }
         ?>
-        
+    
     </div>
+
 </header>       

@@ -29,29 +29,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
 
 
-<header>
-    <div class="header-image">
-        <br>
-        <?php /*$this->Html->image('http://cakephp.org/img/cake-logo.png')*/ ?> 
-        <?= $this->Html->image('slogoblanco.svg', ["width"=>""]) ?>
-        
-        <h1>Escuela Juan Soñador</h1>
-        <h3>Bienvenido </h3>
-        
-        <?php 
-        
-        if ($auth) {
-            echo $auth['username'];
-        }
-        
-        ?>
-        
-    </div>
-</header>
     
 <div class="row">
     <div class="col-lg-12">
-        <h1 class="page-header">Dashboard</h1>
+        <h1 class="page-header"> <i class="fa fa-th-large"></i> Panel de Control <small><?= '('.ucwords($auth['username']).')'; ?></small></h1>
     </div>   
 
 </div>   

@@ -41,16 +41,20 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <body class="home">
 
    
-            
+        <?= $this->Flash->render() ?>        
         <?= $this->element('menu'); ?>
-
-        <?= $this->Flash->render() ?>
+        
+        
     
             <!-- Cargamos la barra lateral sólo si estamos logueados -->    
                 
-        <div class="page-content-wrapper">         
+        <div id="page-content-wrapper" class="page-content-wrapper">         
                 
             <?php if (isset($auth)): ?>
+            
+                <?php if ($page=='home'): ?>
+                    <?= $this->element('bienvenida'); ?>
+                <?php endif; ?>
                
                     <div id="page-wrapper">
                      

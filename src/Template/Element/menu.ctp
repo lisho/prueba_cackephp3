@@ -156,14 +156,28 @@
                     <!-- /.dropdown-tasks -->
                 </li>
                 <!-- /.dropdown -->
-                
+
+<!-- *** Administtración *** -->
+
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-gears fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
+                    
+                     <ul class="dropdown-menu dropdown-user">
+                        <li class="dropdown-header">Usuarios del sistema:</li>
+                        <li><a  href="/Users/add"><i class="glyphicon glyphicon-plus-sign"></i> Nuevo usuario</a></li>
+                       
+                        </li>
+                        
+                         <li role="separator" class="divider"></li>
+                    </ul>
+                
+                
                 </li>
                 
-                
+<!-- *** Alertas *** -->        
+
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-bell fa-fw"></i>  <i class="fa fa-caret-down"></i>
@@ -229,7 +243,7 @@
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-user fa-fw"></i>
-                         <?php echo $auth['username'];?>
+                         <?php echo ucwords($auth['username']);?>
                         <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
