@@ -1,7 +1,8 @@
 <!-- BOOTSTRAP NAVBAR - BARRA DE NAVEGACIÓN-->
 
-
+<br><br><br><br>
 <header>
+    
     <div class="header-image">
         <br>
         <?php /*$this->Html->image('http://cakephp.org/img/cake-logo.png')*/ ?> 
@@ -12,7 +13,7 @@
         
         <?php 
             if ($auth) {
-            echo $auth['username'];
+             echo 'Ya estás logueado'.$auth['username'];
             }
         ?>
         

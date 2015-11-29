@@ -27,23 +27,58 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     
     <?= $this->Html->meta('icon') ?>
 
-    <?= $this->Html->css(['cake','jquery-ui.min','jquery-ui.theme.min','bootstrap.min']) ?>
-    <?= $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'); ?>
-    <?= $this->Html->script(['bootstrap.min']) ?>
- 
+    <?= $this->Html->css([  'cake',
+                            '../startbootstrap/bower_components/bootstrap/dist/css/bootstrap.min.css',
+                            '../startbootstrap/bower_components/metisMenu/dist/metisMenu.min.css',
+                            //'../startbootstrap/dist/css/timeline.css',
+                            '../startbootstrap/dist/css/sb-admin-2.css',
+                            //'../startbootstrap/bower_components/morrisjs/morris.css',
+                            '../startbootstrap/bower_components/font-awesome/css/font-awesome.min.css',
+                            'mis_estilos']) ?>
+    
 </head>
 
 <body class="home">
-    
-    <div class="header-contenedor">
+
+   
+            
         <?= $this->element('menu'); ?>
-    </div>
-    <br><br>    
-    <?= $this->Flash->render() ?>
 
-      <?= $this->fetch('content') ?>
+        <?= $this->Flash->render() ?>
+    
+            <!-- Cargamos la barra lateral sólo si estamos logueados -->    
+                
+        <div class="page-content-wrapper">         
+                
+            <?php if (isset($auth)): ?>
+               
+                    <div id="page-wrapper">
+                     
+                    <?= $this->fetch('content') ?>
+                     
+                    </div>
+                </div> 
+            <?php else: ?>    
+                <?= $this->fetch('content') ?>
+            <?php endif ?>   
+                
+             <!-- /. if barra lateral -->   
+        </div>
 
-    <footer>
-    </footer>
+        
+    
+  <?php //echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'); ?>
+    <script src="../startbootstrap/bower_components/jquery/dist/jquery.min.js"></script>
+     
+   <!-- Bootstrap Core JavaScript -->
+    <script src="../startbootstrap/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+            <!-- Metis Menu Plugin JavaScript -->
+    <script src="../startbootstrap/bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../startbootstrap/dist/js/sb-admin-2.js"></script>      
+    <script src="mi_js.js"></script>             
 </body>
 </html>
