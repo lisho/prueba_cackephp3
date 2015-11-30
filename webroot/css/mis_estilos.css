@@ -19,6 +19,16 @@ label {
 
 }
 
+.nav-home{
+    
+    border:none;
+    float: left;
+    font-size: 1.6em;
+    margin: 0;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
 
 
 /*!
@@ -28,7 +38,7 @@ label {
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-/* Toggle Styles
+ Toggle Styles
 
 #wrapper {
     padding-left: 0;
@@ -70,7 +80,7 @@ label {
 #wrapper.toggled #page-content-wrapper {
     position: absolute;
     margin-right: -250px;
-} */
+} 
 
 /* Sidebar Styles 
 
@@ -119,7 +129,7 @@ label {
     color: #fff;
     background: none;
 }*/
-/*
+
 @media(min-width:768px) {
     #wrapper {
         padding-left: 250px;
@@ -145,5 +155,5 @@ label {
     #wrapper.toggled #page-content-wrapper {
         position: relative;
         margin-right: 0;
-    } */
+    } 
 }

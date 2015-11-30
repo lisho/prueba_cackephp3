@@ -48,7 +48,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     
             <!-- Cargamos la barra lateral sólo si estamos logueados -->    
                 
-        <div id="page-content-wrapper" class="page-content-wrapper">         
+        <div class="page-content-wrapper">         
                 
             <?php if (isset($auth)): ?>
             
@@ -83,6 +83,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
     <!-- Custom Theme JavaScript -->
     <script src="../startbootstrap/dist/js/sb-admin-2.js"></script>      
-    <script src="mi_js.js"></script>             
+    <!-- <script src="mi_js.js"></script> -->             
 </body>
 </html>

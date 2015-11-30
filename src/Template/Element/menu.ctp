@@ -13,9 +13,8 @@
                 </div> -->
 
             <!-- /.navbar-header -->
-           
+
             <ul class="nav navbar-top-links navbar-right">
-                
                 
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
@@ -24,8 +23,15 @@
                     <span class="icon-bar"></span>
                 </button>
                 
+                
                  <!-- /.boton toggle navigation -->
-            
+                 
+                <div class="navbar-toggle nav-home"> 
+                    <a class="" href="/pages/home">
+                        <i class="fa fa-home"></i>
+                    </a>
+                </div>
+  
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa  fa-group  fa-fw"></i> Participantes <i class="fa fa-caret-down"></i>
@@ -268,6 +274,8 @@
                     <!-- /.dropdown-user -->
                 </li>
                 <!-- /.dropdown -->
+                
+                
             </ul>
             <!-- /.navbar-top-links -->
 
