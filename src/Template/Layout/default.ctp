@@ -52,7 +52,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 
             <?php if (isset($auth)): ?>
             
-                <?php if ($page=='home'): ?>
+                <?php if (isset($page) && $page=='home'): ?>
                     <?= $this->element('bienvenida'); ?>
                 <?php endif; ?>
                

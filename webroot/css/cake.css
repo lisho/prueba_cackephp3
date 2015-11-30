@@ -389,6 +389,7 @@ pre {
     background: #fafafa;
 }
 
+/*
 .index table {
     margin-top: 0rem;
     border: 0;
@@ -425,6 +426,7 @@ table tr th {
 table tr:nth-of-type(even) {
     background: none;
 }
+*/
 
 fieldset {
     border: none;
@@ -439,7 +441,7 @@ fieldset legend {
 }
 
 .form button[type="submit"] {
-    float: right;
+    float: left;
     text-transform: uppercase;
     box-shadow: none;
 }

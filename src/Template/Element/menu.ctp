@@ -172,7 +172,8 @@
                     
                      <ul class="dropdown-menu dropdown-user">
                         <li class="dropdown-header">Usuarios del sistema:</li>
-                        <li><a  href="/Users/add"><i class="glyphicon glyphicon-plus-sign"></i> Nuevo usuario</a></li>
+                            <li><a  href="/Users/add"><i class="glyphicon glyphicon-plus"></i> Nuevo usuario</a></li>
+                            <li><a  href="/Users/index"><i class="glyphicon glyphicon-list"></i> Lista de usuarios</a></li>
                        
                         </li>
                         

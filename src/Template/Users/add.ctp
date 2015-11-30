@@ -60,7 +60,9 @@
                    </fieldset>
 
                     <br>
-                        <?= $this->Form->button(__('Crear'), ['type' => 'button', 'class'=>'btn btn-primary']); ?>
+                    
+                        <?= $this->Form->button(__('Crear'), ['type' => 'submit', 'class'=>'btn btn-primary']); ?>
+                        
                         <?= $this->Form->end() ?>
 
             </div>
