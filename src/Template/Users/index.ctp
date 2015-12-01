@@ -1,4 +1,4 @@
-<div clas="row">
+<div class="row">
     
     <div class="col-lg-12">
         
@@ -7,7 +7,7 @@
     </div> <!-- ./col-lg-12-->
 </div> <!-- ./row -->
 
-<div clas="row">
+<div class="row">
     <div class="col-lg-12">
         
     <table class="table table-hover" cellpadding="0" cellspacing="0">
@@ -45,7 +45,7 @@
                 <td><?= h($user->modified) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $user->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['controller'=>'Users','action' => 'edit', $user->id]) ?>
                     <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user->id], ['confirm' =>"¿Estás seguro de que quieres borrar el usuario de ".h($user->nombre)." ".h($user->apellidos)."?", $user->id]) ?>
                 </td>
             </tr>

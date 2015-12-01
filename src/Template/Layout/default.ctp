@@ -35,7 +35,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                             //'../startbootstrap/bower_components/morrisjs/morris.css',
                             '../startbootstrap/bower_components/font-awesome/css/font-awesome.min.css',
                             'mis_estilos']) ?>
-    
+
 </head>
 
 <body class="home">
@@ -61,28 +61,31 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     <?= $this->fetch('content') ?>
                      
                     </div>
-                </div> 
-            <?php else: ?>    
+            
+            <?php else: ?>
+            
                 <?= $this->fetch('content') ?>
             <?php endif ?>   
                 
              <!-- /. if barra lateral -->   
-        </div>
+     </div>
 
         
     
   <?php //echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'); ?>
-    <script src="../startbootstrap/bower_components/jquery/dist/jquery.min.js"></script>
+    
+    <script src="/startbootstrap/bower_components/jquery/dist/jquery.min.js"></script>
      
    <!-- Bootstrap Core JavaScript -->
-    <script src="../startbootstrap/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/startbootstrap/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
             <!-- Metis Menu Plugin JavaScript -->
-    <script src="../startbootstrap/bower_components/metisMenu/dist/metisMenu.min.js"></script>
+    <script src="/startbootstrap/bower_components/metisMenu/dist/metisMenu.min.js"></script>
 
 
     <!-- Custom Theme JavaScript -->
-    <script src="../startbootstrap/dist/js/sb-admin-2.js"></script>      
+    <script src="/startbootstrap/dist/js/sb-admin-2.js"></script>      
     <!-- <script src="mi_js.js"></script> -->             
+    
 </body>
 </html>

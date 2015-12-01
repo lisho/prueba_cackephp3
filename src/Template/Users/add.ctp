@@ -1,4 +1,4 @@
-<div clas="row">
+<div class="row">
     
     <div class="col-lg-12">
         
@@ -9,7 +9,7 @@
 
 
 
-<div clas="row">
+<div class="row">
     <div class="col-lg-12">
         
          <div class="panel panel-primary">
@@ -64,7 +64,7 @@
                         <?= $this->Form->button(__('Crear'), ['type' => 'submit', 'class'=>'btn btn-primary']); ?>
                         
                         <?= $this->Form->end() ?>
-
+                </div>
             </div>
         </div> <!-- /.panel-body -->
     </div>
