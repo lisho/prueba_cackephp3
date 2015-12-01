@@ -1,39 +1,77 @@
-<div class="container">
+<div clas="row">
+    
+    <div class="col-lg-12">
+        
+        <h1 class="page-header"> <i class="fa fa-user"></i> Perfil de Usuario <small> de <?= h($user->nombre).' '.h($user->apellidos) ?></small></h1>
+       
+    </div> <!-- ./col-lg-12-->
+</div> <!-- ./row -->
 
-    <nav class="col-lg-4 content" id="actions-sidebar">
-        <ul class="nav nav-pills nav-stacked">
-            <li class="heading"><?= __('Actions') ?></li>
-            <li class="presentation"><?= $this->Html->link(__('Edit User'), ['action' => 'edit', $user->id]) ?> </li>
-            <li class="presentation"><?= $this->Form->postLink(__('Delete User'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?> </li>
-            <li class="presentation"><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?> </li>
-            <li class="presentation"><?= $this->Html->link(__('New User'), ['action' => 'add']) ?> </li>
-        </ul>
-    </nav>
-    <div class="col-lg-8 content">
-        <h3>Ficha Usuario: <?= h($user->username) ?></h3>
-               <p>
-               <b><?= __('Username') ?></b>
+<div clas="row">
+    <div class="col-lg-12">
+        
+         <div class="panel panel-primary">
+            
+            <div class="panel-heading">
+                 <p>
+               <b><?= __('Puesto que desempeña en la entidad: ') ?></b>
+               <?= h($user->puesto) ?>
+                </p>
+            </div>
+            <!-- /.panel-heading -->
+            
+            <div class="panel-body">
+                
+                <p>
+               <b><?= __('Nombre: ') ?></b>
+               <?= h($user->nombre) ?>
+                </p>
+                <p>
+               <b><?= __('Apellidos: ') ?></b>
+               <?= h($user->apellidos) ?>
+                </p>
+                <p>
+               <b><?= __('Nombre de Usuario: ') ?></b>
                <?= h($user->username) ?>
                 </p>
-               <p>
-               <b><?= __('Password') ?></b>
-               <?= h($user->password) ?>
+                <p>
+               <b><?= __('Teléfono 1: ') ?></b>
+               <?= h($user->telefono1) ?>
                 </p>
+                 <p>
+               <b><?= __('Teléfono 2: ') ?></b>
+               <?= h($user->telefono2) ?>
+                </p>
+                 <p>
+               <b><?= __('Correo electrónico: ') ?></b>
+               <?= h($user->email) ?>
+                </p>
+               
+               <!--
                <p>
-               <b><?= __('Role') ?></b>
+               <b><?= __('Rol') ?></b>
                <?= h($user->role) ?>
                 </p>
                <p>
                <b><?= __('Id') ?></b>
                <?= $this->Number->format($user->id) ?>
                 </p>
+                -->
+                
                <p>
-               <b><?= __('Created') ?></b>
+               <b><?= __('Fecha de creación: ') ?></b>
                <?= h($user->created) ?>
                 </p>
                <p>
-               <b><?= __('Modified') ?></b>
+               <b><?= __('Fecha de última modificación: ') ?></b>
                <?= h($user->modified) ?>
                </p>
+               
+               <?= $this->Html->link(__('Editar este perfil'), ['controller' => 'Users', 'action' => 'edit',$user->id],['type' => 'button', 'class'=>'btn btn-primary']); ?>
+            
+            </div>
+        </div>
     </div>
 </div>
+
+

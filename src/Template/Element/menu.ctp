@@ -254,7 +254,9 @@
                         <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        
+                        <li><a href="/Users/view/<?= $auth['id']; ?>"><i class="fa fa-user fa-fw"></i> Mi perfil</a>
+                        
                         </li>
                         <li>
                             <a href="#">
