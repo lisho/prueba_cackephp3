@@ -17,7 +17,7 @@
             </div>
             <!-- /.panel-heading -->
             
-            <div class="panel-body">
+            <div class="panel-body logo_fondo">
                 
                 <p>
                <b><?= __('Nombre: ') ?></b>

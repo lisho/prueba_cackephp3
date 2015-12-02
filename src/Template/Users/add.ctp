@@ -16,7 +16,7 @@
             <div class="panel-heading"><i class="glyphicon glyphicon-plus"></i>  Crear un Nuevo Usuario</div>
             <!-- /.panel-heading -->
             
-        <div class="panel-body">
+        <div class="panel-body logo_fondo">
             <div class="users form">
                 <?= $this->Form->create($user) ?>
                     <fieldset>

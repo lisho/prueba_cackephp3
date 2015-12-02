@@ -34,7 +34,7 @@
   
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa  fa-group  fa-fw"></i> Participantes <i class="fa fa-caret-down"></i>
+                        <i class="fa  fa-group  fa-fw"></i> <span class="esconder">Participantes </span><i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-messages">
                         <li>
@@ -85,7 +85,7 @@
                 <!-- /.dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-th fa-fw"></i> Acciones <i class="fa fa-caret-down"></i>
+                        <i class="fa fa-th fa-fw"></i><span class="esconder"> Acciones </span><i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-tasks">
                         <li>
@@ -167,7 +167,7 @@
 
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-gears fa-fw"></i> <i class="fa fa-caret-down"></i>
+                        <i class="fa fa-gears fa-fw"></i><span class="esconder"> Administración </span><i class="fa fa-caret-down"></i>
                     </a>
                     
                      <ul class="dropdown-menu dropdown-user">
@@ -187,7 +187,7 @@
 
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-bell fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                        <i class="fa fa-bell fa-fw"></i><span class="esconder"> Alertas </span> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-alerts">
                         <li>
@@ -287,9 +287,8 @@
                     <ul class="nav" id="side-menu">
                         <div class="sidebar-head text-center">
                             
-                            
-                         <?= $this->Html->image('soñadorlogo2.svg', ["width"=>"150px", "class"=>"img-circle img-thumbnail","url"=>['controller'=>'pages', 'action'=>'home']]) ?>
-                         <h1>E.J.S.</h1>
+                         <?= $this->Html->image('soñadorlogo2.svg', ["width"=>"150px", "class"=>"img-circle img-thumbnail sombra","url"=>['controller'=>'pages', 'action'=>'home']]) ?>
+                         <h1 class="logo-text">E.J.S.</h1>
                         </div>
                         <li class="sidebar-search">
                             <div class="input-group custom-search-form">
@@ -302,6 +301,7 @@
                             </div>
                             <!-- /input-group -->
                         </li>
+                        <li><hr></li>
                         <li>
                             <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>

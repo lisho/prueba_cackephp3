@@ -18,7 +18,7 @@
             </div>
             <!-- /.panel-heading -->
             
-            <div class="panel-body">
+            <div class="panel-body logo_fondo">
                 <div class="users form">
                     
                     <?= $this->Form->create($user) ?>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg2" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="200" viewBox="0 0 300 200" width="300" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <defs id="defs4142">
+  <linearGradient id="linearGradient5637">
+   <stop id="stop5639" stop-color="#567bd4" offset="0"/>
+   <stop id="stop5641" stop-color="#567bd4" stop-opacity="0" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient5643" y2="887.39" xlink:href="#linearGradient5637" gradientUnits="userSpaceOnUse" x2="257.86" y1="959.83" x1="4.2715"/>
+ </defs>
+ <metadata id="metadata7">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1" opacity=".169" transform="matrix(1.353 0 0 1.353 32.396 -1170.1)" stroke="url(#linearGradient5643)" stroke-width="11.13">
+  <path id="path3379" style="image-rendering:auto" d="m46.505 1047.3c-10.661-1.5934-21.415-8.0281-28.037-16.776-10.797-14.263-14.251-35.806-8.451-52.711 6.2064-18.089 19.869-29.877 38.384-33.12l2.9901-0.52361 0.5476-6.7316c1.1962-14.704 8.2003-31.948 17.679-43.524 8.3035-10.141 22.408-18.559 35.452-21.158 9.0792-1.8088 13.291-1.8177 22.067-0.0469 15.781 3.1841 30.668 13.135 39.511 26.409l1.8142 2.7233 4.356-3.8009c9.2896-8.1061 19.237-11.906 31.288-11.953 16.245-0.0629 30.172 7.5176 40.257 21.912 6.3077 9.0028 11.078 23.146 11.109 32.938l0.0124 3.8341 5.1793 1.2122c8.7162 2.0402 15.232 6.2087 22.234 14.223 9.4479 10.815 13.173 21.015 13.173 36.065 0 14.959-3.7193 25.105-13.221 36.065-4.4486 5.1315-7.776 8.0139-11.62 10.066-10.403 5.5534-9.1877 5.4644-74.582 5.4644h-60.08l-0.1037-2.8401c-0.0572-1.5621-0.1503-15.941-0.20716-31.951l-0.10349-29.111h-38.949v64.266l-22.582-0.052c-12.42-0.031-25.073-0.4253-28.118-0.8804zm157.6-87v-15.147h-22.375v30.295h22.375z" stroke="url(#linearGradient5643)" stroke-width="11.13" fill="#fff"/>
+ </g>
+</svg>

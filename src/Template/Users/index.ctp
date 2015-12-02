@@ -14,7 +14,7 @@
                 <div class="panel-heading"><i class="glyphicon glyphicon-list-alt">  </i>  Listado de Usuarios del Sistema</div>
                 <!-- /.panel-heading -->
                 
-        <div class="panel-body">   
+        <div class="panel-body logo_fondo">   
             <table class="table table-hover  table-responsive text-center" cellpadding="0" cellspacing="0">
                 <thead class="thead">
                     <tr>
