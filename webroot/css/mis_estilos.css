@@ -34,3 +34,12 @@ label {
     padding-right: 1em;
 }
 
+.cabecera {
+    
+    background-image: url(../img/escuelajs3.svg) ;
+    background-position: bottom right;
+   /* background-attachment: fixed;*/
+    background-repeat: no-repeat;
+    background-size: 150px ; 
+    margin-right: 10px;
+}

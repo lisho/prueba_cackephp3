@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg4231" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="100" viewBox="0 0 100 100" width="100" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <defs id="defs4143">
+  <filter id="filter4145" style="color-interpolation-filters:sRGB">
+   <feGaussianBlur id="feGaussianBlur4147" stdDeviation="6" result="blur" in="SourceAlpha"/>
+   <feSpecularLighting id="feSpecularLighting4149" lighting-color="rgb(255,255,255)" specularConstant="1" result="specular" specularExponent="25" in="blur" surfaceScale="10">
+    <feDistantLight id="feDistantLight4151" elevation="45" azimuth="235"/>
+   </feSpecularLighting>
+   <feComposite id="feComposite4153" in2="SourceGraphic" k3="1" k2="1" result="composite1" in="specular" operator="arithmetic"/>
+   <feComposite id="feComposite4155" operator="in" result="composite2" in2="SourceAlpha" in="composite1"/>
+  </filter>
+ </defs>
+ <metadata id="metadata4236">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1" filter="url(#filter4145)" fill="#567bd4" transform="matrix(.90022 0 0 .90022 6.0455 -855.83)">
+  <g id="layer1-8" style="image-rendering:auto" fill="#567bd4" transform="matrix(.28559 0 0 .32626 -59.207 839.87)">
+   <path id="path3379" fill="#567bd4" stroke="#000" d="m255.98 596.2c-12.865-1.6832-25.842-8.48-33.833-17.72-13.029-15.066-17.197-37.822-10.198-55.678 7.4894-19.107 23.976-31.559 46.319-34.984l3.6082-0.55309 0.6608-7.1105c1.4435-15.532 9.8954-33.746 21.333-45.974 10.02-10.712 27.04-19.604 42.78-22.349 10.956-1.9106 16.038-1.92 26.629-0.0494 19.043 3.3634 37.008 13.874 47.679 27.896l2.1892 2.8766 5.2565-4.0149c11.21-8.5624 23.214-12.576 37.756-12.626 19.603-0.0664 36.409 7.9408 48.579 23.146 7.6116 9.5096 13.368 24.449 13.406 34.792l0.015 4.0499 6.25 1.2805c10.518 2.155 18.381 6.5582 26.83 15.024 11.401 11.424 15.896 22.198 15.896 38.095 0 15.801-4.4881 26.518-15.954 38.095-5.3682 5.4205-9.3835 8.4651-14.022 10.633-12.554 5.866-11.087 5.772-90 5.772h-72.5l-0.1251-3c-0.069-1.65-0.1814-16.838-0.25-33.75l-0.1249-30.75h-47v67.884l-27.25-0.056c-14.988-0.0308-30.256-0.44925-33.93-0.92994zm190.18-91.898v-16h-27v32h27z"/>
+  </g>
+ </g>
+</svg>

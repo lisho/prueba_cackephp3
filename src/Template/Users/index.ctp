@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row cabecera">
     
     <div class="col-lg-12">
         
