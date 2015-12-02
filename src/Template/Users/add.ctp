@@ -2,7 +2,7 @@
     
     <div class="col-lg-12">
         
-        <h1 class="page-header"> <i class="fa fa-user"></i> Nuevo Usuario</h1>
+        <h1 class="page-header"> <i class="fa fa-user"></i> <?= __('Gestión de Usuarios') ?></h1>
        
     </div> <!-- ./col-lg-12-->
 </div> <!-- ./row -->
@@ -13,7 +13,7 @@
     <div class="col-lg-12">
         
          <div class="panel panel-primary">
-            <div class="panel-heading"></div>
+            <div class="panel-heading"><i class="glyphicon glyphicon-plus"></i>  Crear un Nuevo Usuario</div>
             <!-- /.panel-heading -->
             
         <div class="panel-body">
@@ -65,8 +65,8 @@
                         
                         <?= $this->Form->end() ?>
                 </div>
-            </div>
-        </div> <!-- /.panel-body -->
+            </div> <!-- /.panel-body -->
+        </div> 
     </div>
 </div>
 

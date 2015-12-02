@@ -2,7 +2,7 @@
     
     <div class="col-lg-12">
         
-        <h1 class="page-header"> <i class="fa fa-user"></i> Perfil de Usuario 2<small> de <?= h($user->nombre).' '.h($user->apellidos) ?></small></h1>
+        <h1 class="page-header"> <i class="fa fa-user"></i><?= __(' Gestión de Usuarios') ?> </h1>
        
     </div> <!-- ./col-lg-12-->
 </div> <!-- ./row -->
@@ -13,10 +13,7 @@
          <div class="panel panel-primary">
             
             <div class="panel-heading">
-                 <p>
-               <b><?= __('Puesto que desempeña en la entidad: ') ?></b>
-               <?= h($user->puesto) ?>
-                </p>
+                 <i class="fa fa-eye"></i>  Perfil de Usuario de <strong><?= h($user->nombre).' '.h($user->apellidos) ?></strong>
             </div>
             <!-- /.panel-heading -->
             
@@ -29,6 +26,10 @@
                 <p>
                <b><?= __('Apellidos: ') ?></b>
                <?= h($user->apellidos) ?>
+                </p>
+                <p>
+               <b><?= __('Puesto que desempeña en la entidad: ') ?></b>
+               <?= h($user->puesto) ?>
                 </p>
                 <p>
                <b><?= __('Nombre de Usuario: ') ?></b>

@@ -28,7 +28,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->Html->meta('icon') ?>
 
     <?= $this->Html->css([  'cake',
-                            '../startbootstrap/bower_components/bootstrap/dist/css/bootstrap.min.css',
+                            '../startbootstrap/bower_components/bootstrap/dist/css/bootstrap.css',
                             '../startbootstrap/bower_components/metisMenu/dist/metisMenu.min.css',
                             //'../startbootstrap/dist/css/timeline.css',
                             '../startbootstrap/dist/css/sb-admin-2.css',
