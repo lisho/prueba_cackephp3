@@ -49,12 +49,12 @@
                          <!-- <td><?= h($user->created) ?></td> -->
                          <!-- <td><?= h($user->modified) ?></td> -->
                         <td class="actions">
-                            <?= $this->Html->link(__(''), ['action' => 'view', $user->id],["class"=>"fa fa-eye"]) ?>
-                            <?= $this->Html->link(__(''), ['controller'=>'Users','action' => 'edit', $user->id],["class"=>"fa fa-edit"]) ?>
+                            <?= $this->Html->link(__(''), ['action' => 'view', $user->id],["class"=>"fa fa-eye btn btn-primary btn-xs"]) ?>
+                            <?= $this->Html->link(__(''), ['controller'=>'Users','action' => 'edit', $user->id],["class"=>"fa fa-edit btn btn-info btn-xs"]) ?>
                             <?= $this->Form->postLink(__(''), ['action' => 'delete', $user->id], 
                                                                 ['confirm' =>"¿Estás seguro de que quieres borrar el usuario de ".h($user->nombre)." ".h($user->apellidos)."?", 
                                                                 $user->id,
-                                                                "class"=>"fa fa-trash-o"]
+                                                                "class"=>"fa fa-trash-o btn btn-danger btn-xs"]
                                                                 ) ?>
                         </td>
                     </tr>

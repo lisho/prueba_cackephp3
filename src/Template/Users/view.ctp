@@ -68,7 +68,11 @@
                <?= h($user->modified) ?>
                </p>
                
-               <?= $this->Html->link(__('Editar este perfil'), ['controller' => 'Users', 'action' => 'edit',$user->id],['type' => 'button', 'class'=>'btn btn-primary']); ?>
+               <?= $this->Html->link(__(' Editar este perfil'), ['controller' => 'Users', 'action' => 'edit',$user->id],['type' => 'button', 
+                                                                                                                        'class'=>'btn btn-lg btn-outline form-btn btn-primary',
+                                                                                                                        ]); ?>
+                                                                                                                        
+                                           
             
             </div>
         </div>

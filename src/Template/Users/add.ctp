@@ -60,10 +60,11 @@
                    </fieldset>
 
                     <br>
-                    
-                        <?= $this->Form->button(__('Crear'), ['type' => 'submit', 'class'=>'btn btn-primary']); ?>
+                    <div class="container">
+                        <?= $this->Form->button(__('<i class="fa fa-save "></i>  Crear'), ['type' => 'submit', 'class'=>'btn btn-lg btn-outline form-btn btn-success']); ?>
                         
                         <?= $this->Form->end() ?>
+                    </div>
                 </div>
             </div> <!-- /.panel-body -->
         </div> 

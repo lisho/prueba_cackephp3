@@ -64,16 +64,17 @@
 
                     </fieldset>
                     
-                    <div class="col-md-12">
-                        <div class="col-md-6">
-                        <?= $this->Form->button(__('Guardar cambios'), ['type' => 'submit', 'class'=>'btn btn-success']); ?>
+          
+                       <p>
+                           <div>
+                        <?= $this->Form->button(__('<i class="fa fa-save "></i> Guardar cambios'), ['type' => 'submit', 'class'=>'btn btn-lg btn-outline form-btn btn-success']); ?>
                         <?= $this->Form->end() ?>
-                        </div>
-                        
-                        <div class="col-md-6 text-left">
-                        <?= $this->Html->link(__('VOLVER SIN GUARDAR'), ['controller' => 'Users', 'action' => 'index'],['type' => 'button','class'=>'btn btn-primary']); ?>
-                        </div>
-                    </div>
+                           </div> 
+                            
+                           <div>
+                        <?= $this->Html->link(__('VOLVER SIN GUARDAR'), ['controller' => 'Users', 'action' => 'index'],['type' => 'button','class'=>'btn btn-lg btn-outline form-btn btn-primary']); ?>
+                        </p> 
+                           </div>
                     
                 </div>
             </div> <!-- /.panel-body -->
