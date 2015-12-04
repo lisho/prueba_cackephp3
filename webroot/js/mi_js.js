@@ -1,10 +1,9 @@
 
  /* *** Menu Toggle Script *** */
 
-/*
-$("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
+
+$("#nueva-alerta").click(function(e) {
+        
+        $("#formulario").toggleClass("hidden");
     });
     
-*/

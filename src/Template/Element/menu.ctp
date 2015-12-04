@@ -190,6 +190,7 @@
                         <i class="fa fa-bell fa-fw"></i><span class="esconder"> Alertas </span> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-alerts">
+                      
                         <li>
                             <a href="#">
                                 <div>

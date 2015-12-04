@@ -2,7 +2,7 @@
     
     <div class="col-lg-12">
         
-        <h1 class="page-header"> <i class="fa fa-user"></i><?= __(' Gestión de Usuarios') ?> </h1>
+        <h1 class="page-header"> <i class="fa fa-user"></i><?= __(' Gestión de Usuarios') ?> <?= $this->element('botonera_helper'); ?></h1>
        
     </div> <!-- ./col-lg-12-->
 </div> <!-- ./row -->

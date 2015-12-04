@@ -47,13 +47,11 @@ $cakeDescription = 'Escuela Juan Soñador';
    
         <?= $this->Flash->render() ?>        
         <?= $this->element('menu'); ?>
-        
-        
-    
+       
             <!-- Cargamos la barra lateral sólo si estamos logueados -->    
                 
         <div class="page-content-wrapper">         
-                
+
             <?php if (isset($auth)): ?>
             
                 <?php if (isset($page) && $page=='home'): ?>
@@ -61,7 +59,7 @@ $cakeDescription = 'Escuela Juan Soñador';
                 <?php endif; ?>
                
                     <div id="page-wrapper">
-                     
+                    
                     <?= $this->fetch('content') ?>
                      
                     </div>
@@ -89,7 +87,7 @@ $cakeDescription = 'Escuela Juan Soñador';
 
     <!-- Custom Theme JavaScript -->
     <script src="/startbootstrap/dist/js/sb-admin-2.js"></script>      
-    <!-- <script src="mi_js.js"></script> -->             
+    <script src="mi_js.js"></script>           
     
 </body>
 </html>
