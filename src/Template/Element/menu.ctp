@@ -187,10 +187,10 @@
 
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-bell fa-fw"></i><span class="esconder"> Alertas </span> <i class="fa fa-caret-down"></i>
+                        <i class="fa fa-bell fa-fw"></i><span class="esconder"> Avisos </span> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-alerts">
-                      
+                        
                         <li>
                             <a href="#">
                                 <div>
@@ -236,12 +236,20 @@
                             </a>
                         </li>
                         <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>See All Alerts</strong>
+                         <li>
+                             <a  class="text-center" href="/Avisos/index"><i class="fa fa-gears"></i> 
+                                 <strong>  Gestión de Avisos</strong>
                                 <i class="fa fa-angle-right"></i>
                             </a>
-                        </li>
+                       </li>
+                       <!-- <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#"><i class="fa fa-gears"></i>
+                                <strong>  Ver Todos los Avisos</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li> -->
+                        
                     </ul>
                     <!-- /.dropdown-alerts -->
                 </li>
