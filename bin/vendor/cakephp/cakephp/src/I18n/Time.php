@@ -59,7 +59,7 @@ class Time extends Carbon implements JsonSerializable
      * @var string|array|int
      * @see \Cake\I18n\Time::i18nFormat()
      */
-    protected static $_jsonEncodeFormat = "yyyy-MM-dd'T'HH:mm:ssZ";
+    protected static $_jsonEncodeFormat = "dd-MM-yyyy'T'HH:mm:ssZ";
 
     /**
      * The format to use when formatting a time using `Cake\I18n\Time::nice()`
@@ -132,7 +132,7 @@ class Time extends Carbon implements JsonSerializable
     {
         if ($time instanceof DateTime) {
             $tz = $time->getTimeZone();
-            $time = $time->format('Y-m-d H:i:s');
+            $time = $time->format('d-m-Y H:i:s');
         }
 
         if (is_numeric($time)) {

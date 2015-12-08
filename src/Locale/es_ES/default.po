@@ -1,0 +1,201 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2015-12-08 16:27+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+msgid "January"
+msgstr "Enero"
+
+msgid "February"
+msgstr "Febrero"
+
+msgid "March"
+msgstr "Marzo"
+
+msgid "April"
+msgstr "Abril"
+
+msgid "May"
+msgstr "Mayo"
+
+msgid "June"
+msgstr "Junio"
+
+msgid "July"
+msgstr "Julio"
+
+msgid "August"
+msgstr "Agosto"
+
+msgid "September"
+msgstr "Septiembre"
+
+msgid "October"
+msgstr "Octubre"
+
+msgid "November"
+msgstr "Noviembre"
+
+msgid "December"
+msgstr "Diciembre"
+
+msgid "New"
+msgstr "Nuevo"
+
+msgid "List"
+msgstr "Listar"
+
+msgid "Edit"
+msgstr "Editar"
+
+#: I18n/Time.php:271
+msgid "%s ago"
+msgstr "desde hace %s"
+
+#: I18n/Time.php:272
+msgid "on %s"
+msgstr "dentro de %s"
+
+#: I18n/Time.php:312
+msgid "just now"
+msgstr "justo ahora"
+
+#: I18n/Time.php:428
+msgid "about a second ago"
+msgstr "hace alrededor de un segundo"
+
+#: I18n/Time.php:429
+msgid "about a minute ago"
+msgstr "hace alrededor de un minuto"
+
+#: I18n/Time.php:430
+msgid "about an hour ago"
+msgstr "hace alrededor de una hora"
+
+#: I18n/Time.php:431
+msgid "about a day ago"
+msgstr "hace alrededor de un día"
+
+#: I18n/Time.php:432
+msgid "about a week ago"
+msgstr "hace alrededor de una semana"
+
+#: I18n/Time.php:433
+msgid "about a year ago"
+msgstr "hace alrededor de un año"
+
+#: I18n/Time.php:442
+msgid "in about a second"
+msgstr "dentro de alrededor un segundo"
+
+#: I18n/Time.php:443
+msgid "in about a minute"
+msgstr "dentro de alrededor un minuto"
+
+#: I18n/Time.php:444
+msgid "in about an hour"
+msgstr "dentro de alrededor una hora"
+
+#: I18n/Time.php:445
+msgid "in about a day"
+msgstr "dentro de alrededor un día"
+
+#: I18n/Time.php:446
+msgid "in about a week"
+msgstr "dentro de alrededor una semana"
+
+#: I18n/Time.php:447
+msgid "in about a year"
+msgstr "dentro de alrededor un año"
+
+#: I18n/Time.php:401
+msgid "{0} year"
+msgid_plural "{0} years"
+msgstr[0] "{0} año"
+msgstr[1] "{0} años"
+
+#msgid "{0} year"
+#msgstr "{0} año"
+
+#msgid "{0} years"
+#msgstr "{0} años"
+
+#: I18n/Time.php:404
+msgid "{0} month"
+msgid_plural "{0} months"
+msgstr[0] "{0} mes"
+msgstr[1] "{0} meses"
+
+#msgid "{0} month"
+#msgstr "{0} mes"
+
+#msgid "{0} months"
+#msgstr "{0} meses"
+
+#: I18n/Time.php:407
+msgid "{0} week"
+msgid_plural "{0} weeks"
+msgstr[0] "{0} semana"
+msgstr[1] "{0} semanas"
+
+#msgid "{0} week"
+#msgstr "{0} semana"
+
+#msgid "{0} weeks"
+#msgstr "{0} semanas"
+
+#: I18n/Time.php:410
+msgid "{0} day"
+msgid_plural "{0} days"
+msgstr[0] "{0} dia"
+msgstr[1] "{0} dias"
+
+#: I18n/Time.php:410
+#msgid "{0} day"
+#msgstr "{0} día"
+
+#msgid "{0} days"
+#msgstr "{0} días"
+
+#: I18n/Time.php:413
+msgid "{0} hour"
+msgid_plural "{0} hours"
+msgstr[0] "{0} hora"
+msgstr[1] "{0} horas"
+
+#msgid "{0} hour"
+#msgstr "{0} hora"
+
+#msgid "{0} hours"
+#msgstr "{0} horas"
+
+#: I18n/Time.php:416
+msgid "{0} minute"
+msgid_plural "{0} minutes"
+msgstr[0] "{0} minuto"
+msgstr[1] "{0} minutos"
+
+#msgid "{0} minute"
+#msgstr "{0} minuto"
+
+#msgid "{0} minutes"
+#msgstr "{0} minutos"
+
+#: I18n/Time.php:419
+msgid "{0} second"
+msgid_plural "{0} seconds"
+msgstr[0] "{0} segundo"
+msgstr[1] "{0} segundos"
+
+#msgid "{0} second"
+#msgstr "{0} segundo"
+
+#msgid "{0} seconds"
+#msgstr "{0} segundos"

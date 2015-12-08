@@ -12,6 +12,7 @@ use Cake\Event\Event;
 class AvisosController extends AppController
 {
 
+ 
     /**
      * Index method
      *
@@ -19,11 +20,19 @@ class AvisosController extends AppController
      */
     public function index()
     {
+        
+        
         $this->paginate = [
-            'contain' => ['Users', 'ImportanciaAvisos', 'TipoAvisos']
+            'contain' => ['Users', 'ImportanciaAvisos', 'TipoAvisos'],
+            'limit' => 5,
+            'order' => [
+                'Avisos.created' => 'desc'
+        ]
         ];
+       
         $this->set('avisos', $this->paginate($this->Avisos));
         $this->set('_serialize', ['avisos']);
+        
         
      //debug($avisos);exit();
     }

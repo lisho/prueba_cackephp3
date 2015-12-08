@@ -22,7 +22,7 @@ $di->params['Aura\Intl\FormatterLocator']['registry'] = [
  * Aura\Intl\TranslatorLocator
  */
 $di->params['Aura\Intl\TranslatorLocator'] = [
-     'locale' => 'en_US',
+     'locale' => 'es_ES',
     'factory' => $di->lazyNew('Aura\Intl\TranslatorFactory'),
     'formatters' => $di->lazyNew('Aura\Intl\FormatterLocator'),
     'packages' => $di->lazyNew('Aura\Intl\PackageLocator'),

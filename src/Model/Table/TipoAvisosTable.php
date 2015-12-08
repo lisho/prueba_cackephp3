@@ -26,7 +26,7 @@ class TipoAvisosTable extends Table
         parent::initialize($config);
 
         $this->table('tipo_avisos');
-        $this->displayField('id');
+        $this->displayField('tipo');
         $this->primaryKey('id');
 
         $this->hasMany('Avisos', [

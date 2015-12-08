@@ -6,6 +6,108 @@
         <!-- /.panel-heading -->
         <div class="panel-body">
             <div class="list-group">
+                
+                
+                 <table class="table table-hover  table-responsive text-center" cellpadding="0" cellspacing="0">
+                <thead class="thead">
+                    <tr>
+                        
+                        <th></th>
+                        <th class="text-center"><?= $this->Paginator->sort('Caduca') ?></th>
+                        <th class="text-center"><?= $this->Paginator->sort('titulo') ?></th>
+                        <th class="text-center"><?= $this->Paginator->sort('descripción') ?></th>
+                        <th class="text-center"><?= $this->Paginator->sort('Creador') ?></th>
+                       <!-- <th class="text-center"><?= $this->Paginator->sort('Importancia') ?></th> -->
+                        <th class="text-center"><?= $this->Paginator->sort('Tipo de Aviso') ?></th>
+                        <th class="text-center"><?= $this->Paginator->sort('Fecha de Creación') ?></th>
+                        <th class="text-center"><?= $this->Paginator->sort('Ultima Modificación') ?></th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <?php foreach ($avisos as $aviso): ?>
+                   
+                        
+                        <?php 
+                            switch ($aviso->importancia_aviso_id) {
+                                case '1':
+                                    $nube_color='danger';
+                                    break;
+                                case '2':
+                                    $nube_color='warning';
+                                    break;
+                                case '3':
+                                    $nube_color='success';
+                                    break;
+                                    
+                                default:
+                                    $nube_color='';
+                                    break;
+                            
+                            } 
+                            
+                                    
+                             switch ($aviso->tipo_aviso->tipo) {
+                                case 'Anuncio':
+                                    $logo_tipo='fa fa-bullhorn';
+                                    break;
+                                case 'Alerta':
+                                    $logo_tipo='glyphicon glyphicon-alert ';
+                                    break;
+                                case 'Informacion':
+                                    $logo_tipo='fa fa-info-circle';
+                                    break;
+                                    
+                                default:
+                                    $logo_tipo='';
+                                    break;
+                            
+                             }
+                        ?>
+ 
+                      
+                         <tr >
+                        
+                        <!-- <td><?= $aviso->has('importancia_aviso') ? $this->Html->link($aviso->importancia_aviso->importancia, ['controller' => 'ImportanciaAvisos', 'action' => 'view', $aviso->importancia_aviso->id]) : '' ?></td> -->
+                       
+                       
+                        <td><?= $aviso->has('importancia_aviso') ? $this->Html->link('', ['controller' => 'ImportanciaAvisos', 
+                                                                                            'action' => 'view', 
+                                                                                             $aviso->importancia_aviso->id],
+                                                                                             ["class"=>"glyphicon glyphicon-cloud btn btn-circle btn-". $nube_color." btn-xs"]) : '' 
+                                                                                            ?></td>                        
+                        <td>
+                            
+                            <?= $this->Time->format(
+                                  $aviso->caduca,
+                                  "dd/MM/yyyy",
+                                  null
+                                ); ?>
+                            
+                        </td>
+                        <td class="<?= $nube_color ?>"><strong><?= h($aviso->titulo) ?></strong></td>
+                        <td><?= h($aviso->descripcion) ?></td>
+                        <td><?= $aviso->has('user') ? $this->Html->link($aviso->user->username, ['controller' => 'Users', 'action' => 'view', $aviso->user->id]) : '' ?></td>
+                        
+                        <td><big> <?= $aviso->has('tipo_aviso') ? $this->Html->link('', ['controller' => 'TipoAvisos', 
+                                                                                    'action' => 'view', 
+                                                                                    $aviso->tipo_aviso->id],
+                                                                                    ["class"=> $logo_tipo]) : '' 
+                                                                                    ?></big></td>
+                        <td><?= h($aviso->created) ?></td>
+                        <td><?= h($aviso->modified) ?></td>
+                        
+                        
+                    </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+                
+                
+                
+                
+                
                 <a href="#" class="list-group-item">
                     <i class="fa fa-comment fa-fw"></i> New Comment
                     <span class="pull-right text-muted small"><em>4 minutes ago</em>

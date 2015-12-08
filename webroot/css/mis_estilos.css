@@ -158,5 +158,10 @@ label {
 .boton_helper{
     float: right;
     margin-right: 200px;
-    position: fixed absolute;
+    position: fixed absolute ;
+}
+
+.logo_grande{
+    
+    font-size: 1.5em;
 }

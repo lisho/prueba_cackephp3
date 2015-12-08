@@ -42,9 +42,15 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <div class="columns large-12">
             
          <div class="col-lg-6">
-             
-             <?= $this->element('alertas'); ?>
-             
+            <div class="panel panel-danger">
+                <div class="panel-heading"><i class="fa fa-bell"></i>  Últimos Avisos    <a href="/avisos/index" class="pull-right fa fa-sign-in logo_grande "></a> </div>
+                        <!-- /.panel-heading -->
+                        
+                <div class="panel-body logo_fondo">
+                     <?php $cell = $this->cell('Pages::ultimosAvisos');
+                        echo $cell; ?>
+               </div> 
+            </div> 
          </div>
             
             

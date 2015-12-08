@@ -68,10 +68,12 @@
                <?= h($user->modified) ?>
                </p>
                
+               <?php if ($auth['id']== $user->id || $auth['role']=="admin" ): ?>
+               
                <?= $this->Html->link(__(' Editar este perfil'), ['controller' => 'Users', 'action' => 'edit',$user->id],['type' => 'button', 
                                                                                                                         'class'=>'btn btn-lg btn-outline form-btn btn-primary',
                                                                                                                         ]); ?>
-                                                                                                                        
+               <?php endif; ?>
                                            
             
             </div>

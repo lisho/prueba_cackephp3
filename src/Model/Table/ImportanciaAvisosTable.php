@@ -26,7 +26,7 @@ class ImportanciaAvisosTable extends Table
         parent::initialize($config);
 
         $this->table('importancia_avisos');
-        $this->displayField('id');
+        $this->displayField('importancia');
         $this->primaryKey('id');
 
         $this->hasMany('Avisos', [

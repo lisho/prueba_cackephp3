@@ -16,7 +16,8 @@ use Cake\Validation\Validator;
  */
 class AvisosTable extends Table
 {
-
+    
+    
     /**
      * Initialize method
      *
@@ -28,7 +29,7 @@ class AvisosTable extends Table
         parent::initialize($config);
 
         $this->table('avisos');
-        $this->displayField('id');
+        $this->displayField('titulo');
         $this->primaryKey('id');
 
         $this->addBehavior('Timestamp');

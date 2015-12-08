@@ -33,7 +33,7 @@ class I18n
      *
      * @var string
      */
-    const DEFAULT_LOCALE = 'en_US';
+    const DEFAULT_LOCALE = 'es_ES';
 
     /**
      * The translators collection

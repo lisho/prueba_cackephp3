@@ -67,6 +67,7 @@ class AppController extends Controller
         $this->Auth->allow(['index', 'view', 'display']);
        
         $this->set('auth', $this->Auth->user()); //Con esta linea pasamos $auth a la vista.
+        
       
         if (!array_key_exists('_serialize', $this->viewVars) &&
             in_array($this->response->type(), ['application/json', 'application/xml'])

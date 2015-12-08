@@ -174,10 +174,15 @@
                         <li class="dropdown-header">Usuarios del sistema:</li>
                             <li><a  href="/Users/add"><i class="glyphicon glyphicon-plus"></i> Nuevo usuario</a></li>
                             <li><a  href="/Users/index"><i class="glyphicon glyphicon-list"></i> Lista de usuarios</a></li>
-                       
-                        </li>
                         
                          <li role="separator" class="divider"></li>
+                         
+                         <li class="dropdown-header">Gestión de Avisos:</li>
+                         <li><a  href="/Avisos/add"><i class="glyphicon glyphicon-plus"></i> Nuevo aviso</a></li>
+                         <li><a  href="/Avisos/index"><i class="glyphicon glyphicon-list"></i> Lista de avisos</a></li>
+                         <li><a  href="/Importancia_avisos/add"><i class="glyphicon glyphicon-plus"></i> Nuevo nivel de importancia</a></li>
+                         <li><a  href="/Tipo_avisos/add"><i class="glyphicon glyphicon-plus"></i> Nuevo tipo de aviso</a></li>
+                         
                     </ul>
                 
                 
@@ -191,55 +196,14 @@
                     </a>
                     <ul class="dropdown-menu dropdown-alerts">
                         
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-comment fa-fw"></i> New Comment
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-                                    <span class="pull-right text-muted small">12 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-envelope fa-fw"></i> Message Sent
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-tasks fa-fw"></i> New Task
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
+                       <?php $cell = $this->cell('Pages::ultimosAvisos');
+                            echo $cell; ?>
+                            
+                       
                          <li>
-                             <a  class="text-center" href="/Avisos/index"><i class="fa fa-gears"></i> 
+                             <a  class="text-center" href="/Avisos/index"><h4><i class="fa fa-gears"></i> 
                                  <strong>  Gestión de Avisos</strong>
-                                <i class="fa fa-angle-right"></i>
+                                <i class="fa fa-angle-right"></i></h4>
                             </a>
                        </li>
                        <!-- <li class="divider"></li>

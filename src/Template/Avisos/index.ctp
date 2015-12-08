@@ -1,55 +1,129 @@
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Aviso'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Importancia Avisos'), ['controller' => 'ImportanciaAvisos', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Importancia Aviso'), ['controller' => 'ImportanciaAvisos', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Tipo Avisos'), ['controller' => 'TipoAvisos', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Tipo Aviso'), ['controller' => 'TipoAvisos', 'action' => 'add']) ?></li>
-    </ul>
-</nav>
-<div class="avisos index large-9 medium-8 columns content">
-    <h3><?= __('Avisos') ?></h3>
-    <table cellpadding="0" cellspacing="0">
-        <thead>
-            <tr>
-                <th><?= $this->Paginator->sort('id') ?></th>
-                <th><?= $this->Paginator->sort('titulo') ?></th>
-                <th><?= $this->Paginator->sort('caduca') ?></th>
-                <th><?= $this->Paginator->sort('user_id') ?></th>
-                <th><?= $this->Paginator->sort('importancia_aviso_id') ?></th>
-                <th><?= $this->Paginator->sort('tipo_aviso_id') ?></th>
-                <th><?= $this->Paginator->sort('created') ?></th>
-                <th class="actions"><?= __('Actions') ?></th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($avisos as $aviso): ?>
-            <tr>
-                <td><?= $this->Number->format($aviso->id) ?></td>
-                <td><?= h($aviso->titulo) ?></td>
-                <td><?= h($aviso->caduca) ?></td>
-                <td><?= $aviso->has('user') ? $this->Html->link($aviso->user->id, ['controller' => 'Users', 'action' => 'view', $aviso->user->id]) : '' ?></td>
-                <td><?= $aviso->has('importancia_aviso') ? $this->Html->link($aviso->importancia_aviso->id, ['controller' => 'ImportanciaAvisos', 'action' => 'view', $aviso->importancia_aviso->id]) : '' ?></td>
-                <td><?= $aviso->has('tipo_aviso') ? $this->Html->link($aviso->tipo_aviso->id, ['controller' => 'TipoAvisos', 'action' => 'view', $aviso->tipo_aviso->id]) : '' ?></td>
-                <td><?= h($aviso->created) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $aviso->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $aviso->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $aviso->id], ['confirm' => __('Are you sure you want to delete # {0}?', $aviso->id)]) ?>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-    <div class="paginator">
-        <ul class="pagination">
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
-            <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-        </ul>
-        <p><?= $this->Paginator->counter() ?></p>
+<div class="row cabecera">
+    
+    <div class="col-lg-12">
+        
+        <h1 class="page-header"> <i class="fa fa-bell"></i> <?= __('Gestión de Avisos') ?> <?= $this->element('botonera_helper'); ?></h1>
+       
+    </div> <!-- ./col-lg-12-->
+</div> <!-- ./row -->
+
+<div class="row">
+    <div class="col-lg-12">
+     
+         <div class="panel panel-primary">
+                <div class="panel-heading"><i class="glyphicon glyphicon-list-alt">  </i>  Listado Completo de Avisos</div>
+                <!-- /.panel-heading -->
+                
+        <div class="panel-body logo_fondo">
+            <table class="table table-hover  table-responsive text-center" cellpadding="0" cellspacing="0">
+                <thead class="thead">
+                    <tr>
+                        <th class="text-center"><?= $this->Paginator->sort('tipo_aviso_id','Tipo') ?></th>
+                        <th class="text-center"><?= $this->Paginator->sort('created','Fecha de Creación') ?></th>
+                        <th></th>
+                        <th class="text-center"><?= $this->Paginator->sort('caduca', 'Caduca') ?></th>
+                        <th class="text-center"><?= $this->Paginator->sort('titulo') ?></th>
+                       <!-- <th class="text-center"><?= $this->Paginator->sort('descripción') ?></th> -->
+                        <th class="actions text-center"><?= __('Descripción') ?></th>
+                        <th class="text-center"><?= $this->Paginator->sort('user_id','Creador') ?></th>
+                       <!-- <th class="text-center"><?= $this->Paginator->sort('importancia_aviso_id','Importancia') ?></th> -->
+                    
+                        <th class="text-center"><?= $this->Paginator->sort('modified','Ultima Modificación') ?></th>
+                        <!-- <th class="actions text-center"><?= __('Acciones') ?></th> -->
+                    </tr>
+                </thead>
+                <tbody >
+                    <?php foreach ($avisos as $aviso): ?>
+                   
+                        
+                        <?php 
+                            switch ($aviso->importancia_aviso->importancia) {
+                                case 'alta':
+                                    $nube_color='danger';
+                                    break;
+                                case 'media':
+                                    $nube_color='warning';
+                                    break;
+                                case 'baja':
+                                    $nube_color='success';
+                                    break;
+                                    
+                                default:
+                                    $nube_color='';
+                                    break;
+                            
+                            } 
+                            
+                                    
+                             switch ($aviso->tipo_aviso->tipo) {
+                                case 'Anuncio':
+                                    $logo_tipo='fa fa-bullhorn';
+                                    break;
+                                case 'Alerta':
+                                    $logo_tipo='glyphicon glyphicon-alert ';
+                                    break;
+                                case 'Informacion':
+                                    $logo_tipo='fa fa-info-circle';
+                                    break;
+                                    
+                                default:
+                                    $logo_tipo='';
+                                    break;
+                            
+                             }
+                        ?>
+                         <tr>
+                        
+                        <!-- <td><?= $aviso->has('importancia_aviso') ? $this->Html->link($aviso->importancia_aviso->importancia, ['controller' => 'ImportanciaAvisos', 'action' => 'view', $aviso->importancia_aviso->id]) : '' ?></td> -->
+                        <td><big> <?= $aviso->has('tipo_aviso') ? $this->Html->link('', ['controller' => 'TipoAvisos', 
+                                                                                    'action' => 'view', 
+                                                                                    $aviso->tipo_aviso->id],
+                                                                                    ["class"=> $logo_tipo]) : '' 
+                                                                                    ?></big></td>
+                        <td><?= h($aviso->created) ?></td>   
+                        <td><?= $aviso->has('importancia_aviso') ? $this->Html->link('', ['controller' => 'ImportanciaAvisos', 
+                                                                                            'action' => 'view', 
+                                                                                             $aviso->importancia_aviso->id],
+                                                                                             ["class"=>"glyphicon glyphicon-cloud btn btn-circle btn-". $nube_color." btn-xs"]) : '' 
+                                                                                            ?></td>                        
+                        <td>
+                            
+                            <?= $this->Time->format(
+                                  $aviso->caduca,
+                                  "dd/MM/yyyy",
+                                  null
+                                ); ?>
+                            
+                        </td>
+                        <td><a href="/avisos/view/<?=  $aviso->id; ?>"><strong><?= h($aviso->titulo) ?></strong></a></td>
+                        <td><?= h($aviso->descripcion) ?></td>
+                        <td><?= $aviso->has('user') ? $this->Html->link($aviso->user->username, ['controller' => 'Users', 'action' => 'view', $aviso->user->id]) : '' ?></td>
+
+                        <td><?= h($aviso->modified) ?></td>
+                        
+                        <?php if ($aviso->user->username==$auth['username']): ?>
+                        
+                            <td class="actions">
+                                <?php //echo $this->Html->link(__(''), ['action' => 'view', $aviso->id],["class"=>"fa fa-eye btn btn-primary btn-xs"]) ?>
+                                <?= $this->Html->link(__(''), ['action' => 'edit', $aviso->id],["class"=>"fa fa-edit btn btn-info btn-xs"]) ?>
+                                <?= $this->Form->postLink(__(''), ['action' => 'delete', $aviso->id], ['confirm' =>"¿Estás seguro de que quieres borrar este aviso?", 
+                                                                    $aviso->id,
+                                                                    "class"=>"fa fa-trash-o btn btn-danger btn-xs"]) ?>
+                            </td>
+                        <?php endif; ?>
+                        
+                    </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+            <div class="paginator">
+                <ul class="pagination">
+                    <?= $this->Paginator->prev('< ' . __('previous')) ?>
+                    <?= $this->Paginator->numbers() ?>
+                    <?= $this->Paginator->next(__('next') . ' >') ?>
+                </ul>
+                <p><?= $this->Paginator->counter() ?></p>
+            </div>
+        </div>
     </div>
 </div>
