@@ -27,14 +27,17 @@
                         </div>
                         
                          <div class="form-group">
-                             <p><label for="descripcion">Descripción</label></p>
-                            <?= $this->Form->textarea('descripcion', ['rows' => '5', 'cols' => '45', 'label'=>'Descripción']) ?>
+                             <p><label for="descripcion">Descripción <span class="text-danger">*</span></label></p>
+                            <?= $this->Form->textarea('descripcion', ['rows' => '5', 'cols' => '45']) ?>
                         </div>
                         
                         <div class="form-group">
-                            <?= $this->Form->input('caduca', ['empty' => true]); ?>
+                            <?= $this->Form->input('caduca', [
+                                                        'empty' => true,
+                                                        ]); ?>
+                           
                         </div>
-                        
+             
                         <div class="form-group">
                             <?= $this->Form->input('user_id', ['options' => $users]); ?>
                         </div>

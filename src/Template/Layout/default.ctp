@@ -31,13 +31,15 @@ $cakeDescription = 'Escuela Juan Soñador';
     ['type' => 'icon']
         ); ?>
 
-    <?= $this->Html->css([  'cake',
+    <?= $this->Html->css([  'cake',  
+                            //'calendario',
                             '../startbootstrap/bower_components/bootstrap/dist/css/bootstrap.css',
                             '../startbootstrap/bower_components/metisMenu/dist/metisMenu.min.css',
                             //'../startbootstrap/dist/css/timeline.css',
                             '../startbootstrap/dist/css/sb-admin-2.css',
                             //'../startbootstrap/bower_components/morrisjs/morris.css',
                             '../startbootstrap/bower_components/font-awesome/css/font-awesome.min.css',
+                            //'jquery-ui',
                             'mis_estilos']) ?>
 
 </head>
@@ -72,11 +74,11 @@ $cakeDescription = 'Escuela Juan Soñador';
              <!-- /. if barra lateral -->   
      </div>
 
-        
     
-  <?php //echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'); ?>
+    <?php //echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'); ?>
     
-    <script src="/startbootstrap/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/startbootstrap/bower_components/jquery/dist/jquery.min.js"></script> 
+        <!-- <script src="jquery-1.11.3.js"></script>-->
      
    <!-- Bootstrap Core JavaScript -->
     <script src="/startbootstrap/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -87,6 +89,7 @@ $cakeDescription = 'Escuela Juan Soñador';
 
     <!-- Custom Theme JavaScript -->
     <script src="/startbootstrap/dist/js/sb-admin-2.js"></script>      
+    <!--<script src="jquery-ui.js"></script>-->
     <script src="mi_js.js"></script>           
     
 </body>

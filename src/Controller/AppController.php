@@ -17,6 +17,7 @@ namespace App\Controller;
 use Cake\Controller\Controller;
 use Cake\Event\Event;
 
+
 /**
  * Application Controller
  *
@@ -54,6 +55,8 @@ class AppController extends Controller
                 'home'
             ]
         ]);
+        
+        
     }
 
     /**
@@ -76,4 +79,4 @@ class AppController extends Controller
 
         }
     }
-}
+}   
