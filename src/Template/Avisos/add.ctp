@@ -66,20 +66,3 @@
 </div>
 
 
-
-<div class="avisos form large-9 medium-8 columns content">
-    <?= $this->Form->create($aviso) ?>
-    <fieldset>
-        <legend><?= __('Add Aviso') ?></legend>
-        <?php
-            echo $this->Form->input('titulo');
-            echo $this->Form->input('descripcion');
-            echo $this->Form->input('caduca', ['empty' => true]);
-            echo $this->Form->input('user_id', ['options' => $users]);
-            echo $this->Form->input('importancia_aviso_id', ['options' => $importanciaAvisos]);
-            echo $this->Form->input('tipo_aviso_id', ['options' => $tipoAvisos]);
-        ?>
-    </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
-    <?= $this->Form->end() ?>
-</div>

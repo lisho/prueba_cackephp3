@@ -1,8 +1,24 @@
+<?php
+
+$titulo="Gestión de Usuarios";
+$logo_titulo="fa fa-user";
+$titulo_panel="Perfil de Usuario de <strong> $user->nombre  $user->apellidos </strong>";
+$logo_titulo_panel="fa fa-eye";
+$texto_boton="Editar Perfil";
+
+// url del Botón:
+$controller="Users";
+$action="edit";
+$extra="$user->id";
+
+?>
+
+
 <div class="row">
     
     <div class="col-lg-12">
         
-        <h1 class="page-header"> <i class="fa fa-user"></i><?= __(' Gestión de Usuarios') ?> <?= $this->element('botonera_helper'); ?></h1>
+        <h1 class="page-header"> <i class="<?= $logo_titulo;?>"></i><?= __(' Gestión de Usuarios') ?> <?= $this->element('botonera_helper'); ?></h1>
        
     </div> <!-- ./col-lg-12-->
 </div> <!-- ./row -->
@@ -13,7 +29,7 @@
          <div class="panel panel-primary">
             
             <div class="panel-heading">
-                 <i class="fa fa-eye"></i>  Perfil de Usuario de <strong><?= h($user->nombre).' '.h($user->apellidos) ?></strong>
+                 <i class="<?= $logo_titulo_panel;?>"></i>  <?= '  '.$titulo_panel; ?>
             </div>
             <!-- /.panel-heading -->
             
@@ -70,7 +86,7 @@
                
                <?php if ($auth['id']== $user->id || $auth['role']=="admin" ): ?>
                
-               <?= $this->Html->link(__(' Editar este perfil'), ['controller' => 'Users', 'action' => 'edit',$user->id],['type' => 'button', 
+               <?= $this->Html->link(__($texto_boton), ['controller' => $controller, 'action' => $action, $extra],['type' => 'button', 
                                                                                                                         'class'=>'btn btn-lg btn-outline form-btn btn-primary',
                                                                                                                         ]); ?>
                <?php endif; ?>

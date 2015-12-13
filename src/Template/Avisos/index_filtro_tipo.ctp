@@ -11,7 +11,16 @@
     <div class="col-lg-12">
      
          <div class="panel panel-primary">
-                <div class="panel-heading"><i class="glyphicon glyphicon-list-alt">  </i>  Listado Completo de Avisos</div>
+                <div class="panel-heading">
+                    <i class="glyphicon glyphicon-list-alt">  </i>  
+                        Listado Completo de Avisos 
+                        <span class=pull-right> <!-- Botonera de navegabilidad -->
+                            <?= $this->Html->link('  Listado completo', ['controller' => 'Avisos', 
+                                                        'action' => 'index',],
+                                                         ["class"=>"fa fa-undo btn btn-default btn-outline btn-sm"]); 
+                                                        ?>
+                        </span>
+                </div>
                 <!-- /.panel-heading -->
                 
         <div class="panel-body logo_fondo">
@@ -85,7 +94,7 @@
                                                                                             'action' => 'index_filtro_importancia', 
                                                                                              $aviso->importancia_aviso->id],
                                                                                              ["class"=>"glyphicon glyphicon-cloud btn btn-circle btn-". $nube_color." btn-xs"]) : '' 
-                                                                                            ?></td>                        
+                                                                                            ?></td>                
                         <td>
                             
                             <?= $this->Time->format(

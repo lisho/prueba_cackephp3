@@ -21,7 +21,6 @@ class AvisosController extends AppController
     public function index()
     {
         
-        
         $this->paginate = [
             'contain' => ['Users', 'ImportanciaAvisos', 'TipoAvisos'],
             'limit' => 5,
@@ -33,10 +32,52 @@ class AvisosController extends AppController
         $this->set('avisos', $this->paginate($this->Avisos));
         $this->set('_serialize', ['avisos']);
         
+    }
+    
+    /**
+     * IndexFiltroImportancia method
+     *
+     * @return void
+     */
+    public function indexFiltroImportancia($importancia=null)
+    {
+        
+        
+        $this->paginate = [
+            'contain' => ['Users', 'ImportanciaAvisos', 'TipoAvisos'],
+            'limit' => 5,
+            'order' => [
+                'Avisos.created' => 'desc'],
+             'conditions' => ['Avisos.importancia_aviso_id' => $importancia]
+        ];
+        
+        $this->set('avisos', $this->paginate($this->Avisos));
+        $this->set('_serialize', ['avisos']);
+        
         
      //debug($avisos);exit();
     }
 
+    /**
+     * IndexFiltroImportancia method
+     *
+     * @return void
+     */
+    public function indexFiltroTipo($tipo=null)
+    {
+        
+        $this->paginate = [
+            'contain' => ['Users', 'ImportanciaAvisos', 'TipoAvisos'],
+            'limit' => 5,
+            'order' => [
+                'Avisos.created' => 'desc'],
+             'conditions' => ['Avisos.tipo_aviso_id' => $tipo]
+        ];
+        
+        $this->set('avisos', $this->paginate($this->Avisos));
+        $this->set('_serialize', ['avisos']);
+        
+    }
     /**
      * View method
      *

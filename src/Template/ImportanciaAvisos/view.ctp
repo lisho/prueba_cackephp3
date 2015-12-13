@@ -1,14 +1,88 @@
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Edit Importancia Aviso'), ['action' => 'edit', $importanciaAviso->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete Importancia Aviso'), ['action' => 'delete', $importanciaAviso->id], ['confirm' => __('Are you sure you want to delete # {0}?', $importanciaAviso->id)]) ?> </li>
-        <li><?= $this->Html->link(__('List Importancia Avisos'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Importancia Aviso'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Avisos'), ['controller' => 'Avisos', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Aviso'), ['controller' => 'Avisos', 'action' => 'add']) ?> </li>
-    </ul>
-</nav>
+<?php
+
+$titulo="Gestión de Avisos";
+$logo_titulo="fa fa-bell";
+$titulo_panel="Mensajes de nivel".$importanciaAviso->importancia;
+$logo_titulo_panel="fa fa-list";
+$texto_boton="Editar Aviso";
+
+// url del Botón:
+$controller="Avisos";
+$action="edit";
+$extra="$aviso->id";
+
+?>
+
+<div class="row">
+    
+    <div class="col-lg-12">
+        
+        <h1 class="page-header"> <i class="<?= $logo_titulo;?>"></i><?= __('  '.$titulo) ?> <?= $this->element('botonera_helper'); ?></h1>
+       
+    </div> <!-- ./col-lg-12-->
+</div> <!-- ./row -->
+
+<div class="row">
+    <div class="col-lg-12">
+        
+         <div class="panel panel-primary">
+            
+            <div class="panel-heading">
+                 <i class="<?= $logo_titulo_panel;?>"></i>  <?= '  '.$titulo_panel; ?>
+            </div>
+            <!-- /.panel-heading -->
+            
+            <div class="panel-body logo_fondo">
+             
+                 <div class="col-lg-6">
+                <p>
+               <!-- <b><?= __('Titulo: ') ?></b> -->
+               <h2 class="rojo_subrayado"><?= h($aviso->titulo) ?></h2>
+                </p>
+                <p>
+               <b><?= __('Creado por: ') ?></b>
+               <?= h($aviso->user->username) ?>
+                </p>
+                <p>
+               <b><?= __('Importancia del aviso: ') ?></b>
+               <?= h($aviso->importancia_aviso->importancia) ?>
+                </p>
+                <p>
+               <b><?= __('Caducidad del mensaje: ') ?></b>
+               <?= h($aviso->caduca) ?>
+                </p>
+
+               <p>
+               <b><?= __('Fecha de creación: ') ?></b>
+               <?= h($aviso->created) ?>
+                </p>
+               <p>
+               <b><?= __('Fecha de última modificación: ') ?></b>
+               <?= h($aviso->modified) ?>
+               </p>
+               
+               <?php if ($auth['id']== $aviso->user->id || $auth['role']=="admin" ): ?>
+               
+               <?= $this->Html->link(__($texto_boton), ['controller' => $controller, 'action' => $action, $extra],['type' => 'button', 
+                                                                                                                        'class'=>'btn btn-lg btn-outline form-btn btn-primary',
+                                                                                                                        ]); ?>
+               <?php endif; ?>
+                                     
+                </div>
+                
+                 <div class="col-lg-6">
+                     <div class="row content">
+                        <h4><?= __('Contenido del mensaje') ?></h4>
+                            <blockquote> <i><?= $this->Text->autoParagraph(h($aviso->descripcion)); ?></i></blockquote> 
+                     </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <div class="importanciaAvisos view large-9 medium-8 columns content">
     <h3><?= h($importanciaAviso->id) ?></h3>
     <table class="vertical-table">

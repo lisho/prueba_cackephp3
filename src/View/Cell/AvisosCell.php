@@ -3,6 +3,7 @@ namespace App\View\Cell;
 
 use Cake\View\Cell;
 
+
 /**
  * Avisos cell
  */
@@ -27,4 +28,5 @@ class AvisosCell extends Cell
         
         
     }
+
 }

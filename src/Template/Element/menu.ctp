@@ -261,7 +261,7 @@
                         <div class="sidebar-head text-center">
                             
                          <?= $this->Html->image('soñadorlogo2.svg', ["width"=>"150px", "class"=>"img-circle img-thumbnail sombra","url"=>['controller'=>'pages', 'action'=>'home']]) ?>
-                         <h1 class="logo-text">E.J.S.</h1>
+                        <h1 class="logo-text">E.J.S.</h1>
                         </div>
                         <li class="sidebar-search">
                             <div class="input-group custom-search-form">

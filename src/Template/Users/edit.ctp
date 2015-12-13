@@ -73,8 +73,8 @@
                             
                            <div>
                         <?= $this->Html->link(__('VOLVER SIN GUARDAR'), ['controller' => 'Users', 'action' => 'index'],['type' => 'button','class'=>'btn btn-lg btn-outline form-btn btn-primary']); ?>
-                        </p> 
                            </div>
+                        </p> 
                     
                 </div>
             </div> <!-- /.panel-body -->

@@ -1,56 +1,90 @@
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Edit Aviso'), ['action' => 'edit', $aviso->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete Aviso'), ['action' => 'delete', $aviso->id], ['confirm' => __('Are you sure you want to delete # {0}?', $aviso->id)]) ?> </li>
-        <li><?= $this->Html->link(__('List Avisos'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Aviso'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Importancia Avisos'), ['controller' => 'ImportanciaAvisos', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Importancia Aviso'), ['controller' => 'ImportanciaAvisos', 'action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Tipo Avisos'), ['controller' => 'TipoAvisos', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Tipo Aviso'), ['controller' => 'TipoAvisos', 'action' => 'add']) ?> </li>
-    </ul>
-</nav>
-<div class="avisos view large-9 medium-8 columns content">
-    <h3><?= h($aviso->id) ?></h3>
-    <table class="vertical-table">
-        <tr>
-            <th><?= __('Titulo') ?></th>
-            <td><?= h($aviso->titulo) ?></td>
-        </tr>
-        <tr>
-            <th><?= __('User') ?></th>
-            <td><?= $aviso->has('user') ? $this->Html->link($aviso->user->id, ['controller' => 'Users', 'action' => 'view', $aviso->user->id]) : '' ?></td>
-        </tr>
-        <tr>
-            <th><?= __('Importancia Aviso') ?></th>
-            <td><?= $aviso->has('importancia_aviso') ? $this->Html->link($aviso->importancia_aviso->id, ['controller' => 'ImportanciaAvisos', 'action' => 'view', $aviso->importancia_aviso->id]) : '' ?></td>
-        </tr>
-        <tr>
-            <th><?= __('Tipo Aviso') ?></th>
-            <td><?= $aviso->has('tipo_aviso') ? $this->Html->link($aviso->tipo_aviso->id, ['controller' => 'TipoAvisos', 'action' => 'view', $aviso->tipo_aviso->id]) : '' ?></td>
-        </tr>
-        <tr>
-            <th><?= __('Id') ?></th>
-            <td><?= $this->Number->format($aviso->id) ?></td>
-        </tr>
-        <tr>
-            <th><?= __('Caduca') ?></th>
-            <td><?= h($aviso->caduca) ?></td>
-        </tr>
-        <tr>
-            <th><?= __('Created') ?></th>
-            <td><?= h($aviso->created) ?></td>
-        </tr>
-        <tr>
-            <th><?= __('Modified') ?></th>
-            <td><?= h($aviso->modified) ?></td>
-        </tr>
-    </table>
-    <div class="row">
-        <h4><?= __('Descripcion') ?></h4>
-        <?= $this->Text->autoParagraph(h($aviso->descripcion)); ?>
+<?php
+
+$titulo="Gestión de Avisos";
+$logo_titulo="fa fa-bell";
+$titulo_panel="Datos del aviso";
+$logo_titulo_panel="fa fa-list";
+$texto_boton="Editar Aviso";
+
+// url del Botón:
+$controller="Avisos";
+$action="edit";
+$extra="$aviso->id";
+
+?>
+
+<div class="row">
+    
+    <div class="col-lg-12">
+        
+        <h1 class="page-header"> <i class="<?= $logo_titulo;?>"></i><?= __('  '.$titulo) ?> <?= $this->element('botonera_helper'); ?></h1>
+       
+    </div> <!-- ./col-lg-12-->
+</div> <!-- ./row -->
+
+<div class="row">
+    <div class="col-lg-12">
+        
+         <div class="panel panel-primary">
+            
+            <div class="panel-heading">
+                 <i class="<?= $logo_titulo_panel;?>"></i>  <?= '  '.$titulo_panel; ?>
+                 <span class=pull-right> <!-- Botonera de navegabilidad -->
+                        <?= $this->Html->link('  Listado completo', ['controller' => 'Avisos', 
+                                                    'action' => 'index',],
+                                                     ["class"=>"fa fa-undo btn btn-default btn-outline btn-sm"]); 
+                                                    ?>
+                    </span>
+            </div>
+            <!-- /.panel-heading -->
+            
+            <div class="panel-body logo_fondo">
+             
+                 <div class="col-lg-6">
+                <p>
+               <!-- <b><?= __('Titulo: ') ?></b> -->
+               <h2 class="rojo_subrayado"><?= h($aviso->titulo) ?></h2>
+                </p>
+                <p>
+               <b><?= __('Creado por: ') ?></b>
+               <?= h($aviso->user->username) ?>
+                </p>
+                <p>
+               <b><?= __('Importancia del aviso: ') ?></b>
+               <?= h($aviso->importancia_aviso->importancia) ?>
+                </p>
+                <p>
+               <b><?= __('Caducidad del mensaje: ') ?></b>
+               <?= h($aviso->caduca) ?>
+                </p>
+
+               <p>
+               <b><?= __('Fecha de creación: ') ?></b>
+               <?= h($aviso->created) ?>
+                </p>
+               <p>
+               <b><?= __('Fecha de última modificación: ') ?></b>
+               <?= h($aviso->modified) ?>
+               </p>
+               
+               <?php if ($auth['id']== $aviso->user->id || $auth['role']=="admin" ): ?>
+               
+               <?= $this->Html->link(__($texto_boton), ['controller' => $controller, 'action' => $action, $extra],['type' => 'button', 
+                                                                                                                        'class'=>'btn btn-lg btn-outline form-btn btn-primary',
+                                                                                                                        ]); ?>
+               <?php endif; ?>
+                                     
+                </div>
+                
+                 <div class="col-lg-6">
+                     <div class="row content">
+                        <h4><?= __('Contenido del mensaje') ?></h4>
+                            <blockquote> <i><?= $this->Text->autoParagraph(h($aviso->descripcion)); ?></i></blockquote> 
+                     </div>
+                </div>
+
+            </div>
+        </div>
     </div>
 </div>
+
