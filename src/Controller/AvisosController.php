@@ -78,6 +78,29 @@ class AvisosController extends AppController
         $this->set('_serialize', ['avisos']);
         
     }
+    
+    /**
+     * IndexFiltroImportancia method
+     *
+     * @return void
+     */
+    public function indexFiltroUser($user=null)
+    {
+        
+        $this->paginate = [
+            'contain' => ['Users', 'ImportanciaAvisos', 'TipoAvisos'],
+            'limit' => 5,
+            'order' => [
+                'Avisos.created' => 'desc'],
+             'conditions' => ['Avisos.user_id' => $user]
+        ];
+        
+        $this->set('avisos', $this->paginate($this->Avisos));
+        $this->set('_serialize', ['avisos']);
+        
+        
+    }
+    
     /**
      * View method
      *

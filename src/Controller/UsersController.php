@@ -37,6 +37,21 @@ class UsersController extends AppController
         ]);
         $this->set('user', $user);
         $this->set('_serialize', ['user']);
+ 
+        // Paginamos los avisos de este usuario
+ 
+        $this->loadModel('Avisos');
+        $this->paginate = [
+        'contain' => ['Users', 'ImportanciaAvisos', 'TipoAvisos'],
+        'limit' => 5,
+        'order' => [
+            'Avisos.created' => 'desc'],
+         'conditions' => ['Avisos.user_id' => $id]
+        ];
+        
+        $this->set('avisos', $this->paginate($this->Avisos));
+        $this->set('_serialize', ['avisos']); 
+ 
     }
 
     /**

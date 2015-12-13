@@ -2,8 +2,7 @@
 namespace App\View\Cell;
 
 use Cake\View\Cell;
-
-
+use Controller\Controller\Paginate;
 /**
  * Avisos cell
  */

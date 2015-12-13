@@ -52,13 +52,19 @@
                         
                         
                    </fieldset>
-
-                    <br>
-                    <div class="container">
+                    
+                    <p>
+     
+                    <div class="">
                         <?= $this->Form->button(__('<i class="fa fa-save "></i>  Crear'), ['type' => 'submit', 'class'=>'btn btn-lg btn-outline form-btn btn-success']); ?>
                         
                         <?= $this->Form->end() ?>
                     </div>
+                    <div>
+                        <?= $this->Html->link(__('VOLVER SIN CREAR AVISO'), ['controller' => 'Avisos', 'action' => 'index'],['type' => 'button','class'=>'btn btn-lg btn-outline form-btn btn-primary']); ?>
+                    </div>
+                    
+                    </p>
                 </div>
             </div> <!-- /.panel-body -->
         </div> 

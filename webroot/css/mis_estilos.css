@@ -52,7 +52,8 @@ label {
 
 .panel{
     
-    box-shadow: 10px 10px 10px #2f716e;
+    /* box-shadow: 10px 10px 10px #2f716e; */
+    box-shadow: 8px 8px 5px #666;
 }
 
 .sidebar-nav {
@@ -79,6 +80,11 @@ label {
 .sombra{
     
     box-shadow: 5px 5px 10px #000000;
+}
+
+.sin_sombra{
+    
+    box-shadow: 1px 1px 3px #000000;
 }
 
 .logo_fondo{
