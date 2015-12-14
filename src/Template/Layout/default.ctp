@@ -76,9 +76,9 @@ $cakeDescription = 'Escuela Juan Soñador';
 
     
     <?php //echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'); ?>
-    
-    <script src="/startbootstrap/bower_components/jquery/dist/jquery.min.js"></script> 
-        <!-- <script src="jquery-1.11.3.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+   <!-- <script src="/startbootstrap/bower_components/jquery/dist/jquery.min.js"></script> 
+         <script src="jquery-1.11.3.js"></script>-->
      
    <!-- Bootstrap Core JavaScript -->
     <script src="/startbootstrap/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>

@@ -256,7 +256,7 @@
             <!-- /.navbar-top-links -->
 
             <div class="navbar-default sidebar" role="navigation">
-                <div class="sidebar-nav navbar-collapse">
+                <div class="sidebar-nav navbar-collapse hidden">
                     <ul class="nav" id="side-menu">
                         <div class="sidebar-head text-center">
                             
