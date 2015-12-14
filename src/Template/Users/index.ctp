@@ -2,17 +2,91 @@
     
     <div class="col-lg-12">
         
-        <h1 class="page-header"> <i class="fa fa-user"></i> <?= __('Gestión de Usuarios') ?> <?= $this->element('botonera_helper'); ?></h1>
+        <h1 class="page-header"> <i class="fa fa-user"></i> <?= __('Gestión de Usuarios') ?> <?= $this->element('botonera_helper_gestion'); ?></h1>
        
     </div> <!-- ./col-lg-12-->
 </div> <!-- ./row -->
 
 <div class="row">
-    <div class="col-lg-12">
-     
-         <div class="panel panel-primary">
-                <div class="panel-heading"><i class="glyphicon glyphicon-list-alt">  </i>  Listado de Usuarios del Sistema</div>
-                <!-- /.panel-heading -->
+    
+    <div class="panel panel-primary">
+        
+        <div class="panel-body logo_fondo">   
+            
+              <div class="col-lg-12">  
+                <?php foreach ($users as $user): ?>
+                
+                <?php 
+                    
+                  switch ($user->role) {
+                    case 'admin':
+                          $color='green';
+                          $fa='cloud ';
+                          break;
+                    case 'formador':
+                          $color='yellow';
+                          $fa='mortar-board';
+                          break;
+                    case 'tecnico':
+                          $color='red';
+                          $fa='group';
+                          break;
+                      default:
+                          // code...
+                          break;
+                  } 
+                  
+                
+                ?>
+                <a href="view/<?= $user->id; ?>:" class="sin_efectos">
+                
+                   <div class="col-lg-4 col-md-6">
+                       
+                        <div class="panel panel-<?= $color; ?>">
+                            <div class="panel-heading ">
+                                <p class='text-center'>
+                                    <?= h($user->nombre.' '.$user->apellidos) ?>
+                                </p>
+                                <h4 class='text-center'>
+                                     <i class="fa fa-<?= $fa;?> fa-4x"></i>
+                                    <p><?= h($user->role) ?></p>
+                                </h4>
+                            </div>
+            
+                            <div class="panel-body">   
+                            <small>    
+                                <p><?= '<strong>Monbre de Usuario: </strong>'.h($user->username) ?></p>
+                                <p><?= '<strong>Puesto: </strong>'.h($user->puesto) ?></p>
+                                <p><?= '<strong>Teléfono1: </strong>'.h($user->telefono1) ?></p>
+                                <p><?= '<strong>Teléfono2: </strong>'.h($user->telefono2) ?></p>
+                                <p><?= '<strong>Email: </strong>'.h($user->email) ?></p>
+                                <p><?= '<strong>Alta en el sistema: </strong>'.h($user->created) ?></p>
+                                <p><?= '<strong>Última Modificación: </strong>'.h($user->modified) ?></p>
+  
+                            </small>
+                            </div>
+                            
+                            <div class="panel-footer">   
+                                <?= $this->Html->link(__(''), ['action' => 'view', $user->id],["class"=>"fa fa-eye btn btn-primary btn-xs"]) ?>
+                                <?= $this->Html->link(__(''), ['controller'=>'Users','action' => 'edit', $user->id],["class"=>"fa fa-edit btn btn-info btn-xs"]) ?>
+                                <?= $this->Form->postLink(__(''), ['action' => 'delete', $user->id], 
+                                                        ['confirm' =>"¿Estás seguro de que quieres borrar el usuario de ".h($user->nombre)." ".h($user->apellidos)."?", 
+                                                        $user->id,
+                                                        "class"=>"fa fa-trash-o btn btn-danger btn-xs"]
+                                                        ) ?>
+                            </div>
+                         </div>        
+                    </div>
+                 </a> <!-- ./ Hiperenlace -->
+                 <?php endforeach; ?>
+            </div> 
+        </div>
+    </div> <!-- ./ Panel Primary -->
+    
+    
+     <div class="panel panel-primary">
+            <div class="panel-heading"><i class="glyphicon glyphicon-list-alt">  </i>  Listado de Usuarios del Sistema</div>
+            <!-- /.panel-heading -->
                 
         <div class="panel-body logo_fondo">   
             <table class="table table-hover  table-responsive text-center" cellpadding="0" cellspacing="0">
@@ -71,6 +145,6 @@
                 <p><?= $this->Paginator->counter() ?></p>
             </div>
         </div>
-    </div>
-</div>
-
+    </div> <!-- ./ Panel Primary -->
+ 
+</div> <!-- ./ Row -->

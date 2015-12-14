@@ -55,7 +55,7 @@
                         </div>
                         
                         <?= $this->Form->input('role', [
-                            'options' => ['admin' => 'Admin', 'formador' => 'Formador']
+                            'options' => ['admin' => 'Admin', 'formador' => 'Formador', 'tecnico'=>'Técnico']
                         ]) ?>
                    </fieldset>
 

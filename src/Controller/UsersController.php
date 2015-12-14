@@ -51,7 +51,7 @@ class UsersController extends AppController
         
         $this->set('avisos', $this->paginate($this->Avisos));
         $this->set('_serialize', ['avisos']); 
- 
+        
     }
 
     /**

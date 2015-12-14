@@ -193,3 +193,8 @@ label {
     margin-bottom: 20px;
     border-bottom: 2px solid #BE140B;
 }
+
+a.sin_efectos, a.sin_efectos:hover{
+    
+    text-decoration: none;
+}

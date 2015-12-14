@@ -58,7 +58,9 @@
                             </div>
                             
                             <div class="form-group">
-                            <?=$this->Form->input('role'); ?>
+                            <?=$this->Form->input('role',  [
+                                    'options' => ['admin' => 'Admin', 'formador' => 'Formador', 'tecnico'=>'Técnico']
+                                    ]); ?>
                             </div>
                             
 

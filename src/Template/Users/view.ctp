@@ -115,8 +115,14 @@ $extra="$user->id";
                               <!-- Tab panes -->
                               <div class="tab-content">
                                   <div class="tab-pane fade in active" id="avisos">
+                                      
+                                       <?php if (count($avisos)>0):?>
                                        <h4>Mis Avisos Publicados</h4>
                                        <?= $this->element('UserElements/mis_avisos'); ?>
+                                       <?php else:?>
+                                         <br>
+                                          <em class="text-danger"> Lo sentimos, aún no has publicado ningún aviso.</em>
+                                       <?php endif; ?>
                                   </div>
                                   <div class="tab-pane fade" id="profile">
                                       <h4>Profile Tab</h4>
