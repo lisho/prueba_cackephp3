@@ -36,7 +36,7 @@ $extra="$user->id";
             <div class="panel-body logo_fondo">
                 
                 <div class="col-lg-6">
-                
+                   <div class="avatar pull-left img-contenedor"><?= $this->element('UserElements/avatar'); ?></div>
                     <p>
                    <b><?= __('Nombre: ') ?></b>
                    <?= h($user->nombre) ?>
@@ -91,6 +91,7 @@ $extra="$user->id";
                    <?= $this->Html->link(__($texto_boton), ['controller' => $controller, 'action' => $action, $extra],['type' => 'button', 
                                                                                                                             'class'=>'btn btn-lg btn-outline form-btn btn-primary',
                                                                                                                             ]); ?>
+                   
                    <?php endif; ?>
                 
                  </div>

@@ -12,7 +12,7 @@
     <div class="panel panel-primary">
         
         <div class="panel-body logo_fondo">   
-            
+                <?php $i=0; ?>
               <div class="col-lg-12">  
                 <?php foreach ($users as $user): ?>
                 
@@ -38,32 +38,50 @@
                   
                 
                 ?>
-                <a href="view/<?= $user->id; ?>:" class="sin_efectos">
+                <a href="<?= $this->Url->build('Users/view/', true);?><?= $user->id; ?>:" class="sin_efectos">
                 
                    <div class="col-lg-4 col-md-6">
                        
-                        <div class="panel panel-<?= $color; ?>">
-                            <div class="panel-heading ">
-                                <p class='text-center'>
-                                    <?= h($user->nombre.' '.$user->apellidos) ?>
-                                </p>
-                                <h4 class='text-center'>
-                                     <i class="fa fa-<?= $fa;?> fa-4x"></i>
-                                    <p><?= h($user->role) ?></p>
-                                </h4>
-                            </div>
-            
-                            <div class="panel-body">   
-                            <small>    
-                                <p><?= '<strong>Monbre de Usuario: </strong>'.h($user->username) ?></p>
-                                <p><?= '<strong>Puesto: </strong>'.h($user->puesto) ?></p>
-                                <p><?= '<strong>Teléfono1: </strong>'.h($user->telefono1) ?></p>
-                                <p><?= '<strong>Teléfono2: </strong>'.h($user->telefono2) ?></p>
-                                <p><?= '<strong>Email: </strong>'.h($user->email) ?></p>
-                                <p><?= '<strong>Alta en el sistema: </strong>'.h($user->created) ?></p>
-                                <p><?= '<strong>Última Modificación: </strong>'.h($user->modified) ?></p>
-  
-                            </small>
+                        <div class="panel panel-<?= $color; ?>" id="accordion">
+                            
+                            
+                                <div class="panel-heading " >
+                                   
+                                        <p class='text-center'>
+                                            <?= h($user->nombre.' '.$user->apellidos) ?>
+                                        </p>
+                                        <h4 class='text-center'>
+                                             <i class="fa fa-<?= $fa;?> fa-4x"></i>
+                                            <p><?= h($user->role) ?></p>
+                                        </h4>
+                                  
+                                </div>
+                           
+                            <div class="panel-body panel-collapse collapse" id="collapse<?= $i;?>">   
+                               
+                                <div class="col-lg-8">  
+                                    <small>    
+                                        <p><?= '<strong>Monbre de Usuario: </strong>'.h($user->username) ?></p>
+                                        <p><?= '<strong>Puesto: </strong>'.h($user->puesto) ?></p>
+                                        <p><?= '<strong>Teléfono1: </strong>'.h($user->telefono1) ?></p>
+                                        <p><?= '<strong>Teléfono2: </strong>'.h($user->telefono2) ?></p>
+                                        <p><?= '<strong>Email: </strong>'.h($user->email) ?></p>
+                                        <p><?= '<strong>Alta en el sistema: </strong>'.h($user->created) ?></p>
+                                        <p><?= '<strong>Última Modificación: </strong>'.h($user->modified) ?></p>
+                                    </small>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="img-contenedor text-center">
+                                        
+                                        <?php $avatar=$user['username'].".jpg";?>
+                                        <?php if(in_array($avatar,$fotos)):?>
+                                             <img class="img-circle avatar" src="/img/user_fotos/<?= $avatar; ?>" width="100%"></img>
+                                        <?php else: ?>
+                                             <i class="fa fa-user fa-5x"></i>
+                                        <?php endif;?>
+                                    </div>
+                                </div>
+                                
                             </div>
                             
                             <div class="panel-footer">   
@@ -74,6 +92,7 @@
                                                         $user->id,
                                                         "class"=>"fa fa-trash-o btn btn-danger btn-xs"]
                                                         ) ?>
+                                <a  data-toggle="collapse" class="collapsed" href="#collapse<?= $i++;?>"><i class="pull-right fa fa-toggle-down fa-2x"></i> </a>
                             </div>
                          </div>        
                     </div>

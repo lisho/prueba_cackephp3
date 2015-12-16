@@ -3,6 +3,8 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\Event\Event;
+use Cake\Filesystem\Folder;
+use Cake\Filesystem\File;
 
 /**
  * Users Controller
@@ -21,6 +23,11 @@ class UsersController extends AppController
     {
         $this->set('users', $this->paginate($this->Users));
         $this->set('_serialize', ['users']);
+        
+        $dir = new Folder(WWW_ROOT . 'img/user_fotos');
+		$fotos = $dir->find('.*\.jpg');
+		
+		$this->set('fotos',$fotos);		
     }
 
     /**
@@ -52,6 +59,14 @@ class UsersController extends AppController
         $this->set('avisos', $this->paginate($this->Avisos));
         $this->set('_serialize', ['avisos']); 
         
+        //debug($user);exit();
+        
+        $dir = new Folder(WWW_ROOT . 'img/user_fotos');
+        $f=$user['username'].'.jpg';
+        $foto = $dir->find($f);
+		
+		$this->set('foto',$foto);		
+        //debug($f);exit();
     }
 
     /**
@@ -89,15 +104,35 @@ class UsersController extends AppController
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $user = $this->Users->patchEntity($user, $this->request->data);
-            if ($this->Users->save($user)) {
-                $this->Flash->success(__('Los cambios en el usuario se han guardado correctamente.'));
-                return $this->redirect(['action' => 'index']);
-            } else {
-                $this->Flash->error(__('No se han guardado los cambios en el usuario. Por favor, inténtelo le nuevo.'));
-            }
+            
+          //  debug($this->request->data);exit();
+            
+           $filename=$this->request->data['foto'];
+			
+				if (!empty($this->request->data['foto']['tmp_name'])
+    				&& is_uploaded_file($this->request->data['foto']['tmp_name'])) 
+				{
+
+				$filename=basename($this->request->data['username']);
+
+				move_uploaded_file($this->request->data['foto']['tmp_name'],IMAGES.'user_fotos/'.$this->request->data['username'].'.jpg');
+				} 
+				
+                if ($this->Users->save($user)) {
+                    $this->Flash->success(__('Los cambios en el usuario se han guardado correctamente.'));
+                    return $this->redirect(['action' => 'index']);
+                } else {
+                    $this->Flash->error(__('No se han guardado los cambios en el usuario. Por favor, inténtelo le nuevo.'));
+                }
         }
         $this->set(compact('user'));
         $this->set('_serialize', ['user']);
+        
+        $dir = new Folder(WWW_ROOT . 'img/user_fotos');
+        $f=$user['username'].'.jpg';
+        $foto = $dir->find($f);
+		
+		$this->set('foto',$foto);	
     }
 
     /**

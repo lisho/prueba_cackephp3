@@ -21,48 +21,71 @@
             <div class="panel-body logo_fondo">
                 <div class="users form">
                     
-                    <?= $this->Form->create($user) ?>
+                    <?= $this->Form->create($user, ["type"=>"file"]) ?>
                     <fieldset>
                         <legend><?= __('Añade/Edita los datos de este perfil...') ?></legend>
                         
-                            <div class="form-group">
-                            <?=$this->Form->input('nombre'); ?>
+                        <div class="col-lg-12">
+                             <div class="col-lg-6">
+                                 
+                                <div class="form-group">
+                                <?=$this->Form->input('nombre'); ?>
+                                </div>
+                                
+                                <div class="form-group">
+                                <?=$this->Form->input('apellidos'); ?>
+                                </div>
+                                
+                                <div class="form-group">
+                                <?=$this->Form->input('puesto'); ?>
+                                </div>
+                                
+                                <div class="form-group">
+                                <?=$this->Form->input('telefono1'); ?>
+                                </div>
+                                
+                                <div class="form-group">
+                                <?=$this->Form->input('telefono2'); ?>
+                                </div>
+                                
+                                <div class="form-group">
+                                <?=$this->Form->input('email'); ?>
+                                </div>
+                                
+                                <div class="form-group">
+                                <?=$this->Form->input('username'); ?>
+                                </div>
+                                
+                                <!--
+                                <div class="form-group">
+                                <?=$this->Form->input('password'); ?>
+                                </div> -->
+                                
+                                <div class="form-group">
+                                <?=$this->Form->input('role',  [
+                                        'options' => ['admin' => 'Admin', 'formador' => 'Formador', 'tecnico'=>'Técnico']
+                                        ]); ?>
+                                </div>
                             </div>
                             
-                            <div class="form-group">
-                            <?=$this->Form->input('apellidos'); ?>
+                             <div class="col-lg-6">
+                                 
+                                <!-- *** Otras opciones para archivos file***
+                                <?= $this->Form->input('field', array('type' => 'file')); ?> 
+                                    <?= $this->Form->file('foto', ['label'=>'Selecciona un archivo para cambiar la foto de este perfil:']); ?>  -->
+                                
+                                 <div class="form-group">
+                                     <div class="thumbnail">
+                                         <h4 class="rojo_subrayado">Foto actual:</h4>
+                                     <div class="img-contenedor text-center">
+                                             <?= $this->element('UserElements/avatar'); ?>
+                                        </div>
+                                    
+                                <?= $this->Form->input('foto', [
+                                                            'type'=>'file',
+                                                            'label'=>'Selecciona un archivo nuevo para cambiar la foto de este perfil:']); ?>  
+                                </div> </div>
                             </div>
-                            
-                            <div class="form-group">
-                            <?=$this->Form->input('puesto'); ?>
-                            </div>
-                            
-                            <div class="form-group">
-                            <?=$this->Form->input('telefono1'); ?>
-                            </div>
-                            
-                            <div class="form-group">
-                            <?=$this->Form->input('telefono2'); ?>
-                            </div>
-                            
-                            <div class="form-group">
-                            <?=$this->Form->input('email'); ?>
-                            </div>
-                            
-                            <div class="form-group">
-                            <?=$this->Form->input('username'); ?>
-                            </div>
-                            
-                            <div class="form-group">
-                            <?=$this->Form->input('password'); ?>
-                            </div>
-                            
-                            <div class="form-group">
-                            <?=$this->Form->input('role',  [
-                                    'options' => ['admin' => 'Admin', 'formador' => 'Formador', 'tecnico'=>'Técnico']
-                                    ]); ?>
-                            </div>
-                            
 
                     </fieldset>
                     
