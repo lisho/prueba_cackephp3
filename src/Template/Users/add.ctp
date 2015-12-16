@@ -18,45 +18,62 @@
             
         <div class="panel-body logo_fondo">
             <div class="users form">
-                <?= $this->Form->create($user) ?>
+                <?= $this->Form->create($user, ["type"=>"file"]) ?>
                     <fieldset>
-                        <legend><?= __('Añade un nuevo usuario al sistema...') ?></legend>
                         
-                         <div class="form-group">
-                            <?= $this->Form->input('nombre') ?>
+                            <legend><?= __('Añade un nuevo usuario al sistema...') ?></legend>
+                    
+                    <div class="col-lg-12">
+                          <div class="col-lg-6">  
+                             <div class="form-group">
+                                <?= $this->Form->input('nombre') ?>
+                            </div>
+                            
+                             <div class="form-group">
+                                <?= $this->Form->input('apellidos') ?>
+                            </div>
+                            
+                            <div class="form-group">
+                                <?= $this->Form->input('puesto') ?>
+                            </div>
+                            
+                            <div class="form-group">
+                                <?= $this->Form->input('telefono1', ['label'=>'Teléfono 1']) ?>
+                            </div>
+                            
+                            <div class="form-group">
+                                <?= $this->Form->input('telefono2', ['label'=>'Teléfono 2']) ?>
+                            </div>
+                            
+                            <div class="form-group">
+                                <?= $this->Form->input('email') ?>
+                            </div>
+                            
+                            <div class="form-group">
+                                <?= $this->Form->input('username',['default'=>'']) ?>
+                            </div>
+                            
+                            <div class="form-group">
+                                <?= $this->Form->input('password',['default'=>'']) ?>
+                            </div>
+                            
+                            <?= $this->Form->input('role', [
+                                'options' => ['admin' => 'Admin', 'formador' => 'Formador', 'tecnico'=>'Técnico']
+                            ]) ?>
+                        
+                         </div>
+                            
+                         <div class="col-lg-6">
+                         
+                             <div class="form-group">
+                                 <h4 class="rojo_subrayado">Añadir foto de perfil:</h4>
+            
+                                <?= $this->Form->input('foto', [
+                                                    'type'=>'file',
+                                                  'label'=>'Selecciona un archivo para añadir la foto de perfil:']); ?>  
+                            </div> 
+                            
                         </div>
-                        
-                         <div class="form-group">
-                            <?= $this->Form->input('apellidos') ?>
-                        </div>
-                        
-                        <div class="form-group">
-                            <?= $this->Form->input('puesto') ?>
-                        </div>
-                        
-                        <div class="form-group">
-                            <?= $this->Form->input('telefono1', ['label'=>'Teléfono 1']) ?>
-                        </div>
-                        
-                        <div class="form-group">
-                            <?= $this->Form->input('telefono2', ['label'=>'Teléfono 2']) ?>
-                        </div>
-                        
-                        <div class="form-group">
-                            <?= $this->Form->input('email') ?>
-                        </div>
-                        
-                        <div class="form-group">
-                            <?= $this->Form->input('username') ?>
-                        </div>
-                        
-                        <div class="form-group">
-                            <?= $this->Form->input('password') ?>
-                        </div>
-                        
-                        <?= $this->Form->input('role', [
-                            'options' => ['admin' => 'Admin', 'formador' => 'Formador', 'tecnico'=>'Técnico']
-                        ]) ?>
                    </fieldset>
 
                     <br>
@@ -70,4 +87,4 @@
         </div> 
     </div>
 </div>
-
+</div>

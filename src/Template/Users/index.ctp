@@ -61,7 +61,7 @@
                                
                                 <div class="col-lg-8">  
                                     <small>    
-                                        <p><?= '<strong>Monbre de Usuario: </strong>'.h($user->username) ?></p>
+                                        <p><?= '<strong>Nonbre de Usuario: </strong>'.h($user->username) ?></p>
                                         <p><?= '<strong>Puesto: </strong>'.h($user->puesto) ?></p>
                                         <p><?= '<strong>Teléfono1: </strong>'.h($user->telefono1) ?></p>
                                         <p><?= '<strong>Teléfono2: </strong>'.h($user->telefono2) ?></p>
@@ -73,8 +73,8 @@
                                 <div class="col-lg-4">
                                     <div class="img-contenedor text-center">
                                         
-                                        <?php $avatar=$user['username'].".jpg";?>
-                                        <?php if(in_array($avatar,$fotos)):?>
+                                        <?php $avatar=$user['foto'];?>
+                                        <?php if(!empty($avatar)):?>
                                              <img class="img-circle avatar" src="/img/user_fotos/<?= $avatar; ?>" width="100%"></img>
                                         <?php else: ?>
                                              <i class="fa fa-user fa-5x"></i>

@@ -1,3 +1,8 @@
+body{
+    
+    font-size: 12px;
+}
+
 header legend {
 
     color: #fff ;    
@@ -211,7 +216,7 @@ a.sin_efectos, a.sin_efectos:hover{
     -moz-transition:all .9s ease; /* Firefox */
     -o-transition:all .9s ease; /* IE 9 */
     -ms-transition:all .9s ease; /* Opera */
-    /*width:70%; */
+    width:100%; 
 }
 .img-contenedor:hover img {
     -webkit-transform:scale(1.45);
@@ -229,7 +234,7 @@ a.sin_efectos, a.sin_efectos:hover{
 
 .avatar{
     
-    max-width: 200px;
+    max-width: 150px;
     padding: 5px;
-    margin: 10px;
+   
 }

@@ -77,6 +77,9 @@ class UsersTable extends Table
         $validator
             ->requirePresence('role', 'create')
             ->notEmpty('role');
+        
+         $validator
+            ->allowEmpty('foto');
 
         return $validator;
     }

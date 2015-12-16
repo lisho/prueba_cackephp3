@@ -39,7 +39,7 @@
                         </div>
              
                         <div class="form-group">
-                            <?= $this->Form->input('user_id', ['options' => $users]); ?>
+                            <?= $this->Form->hidden('user_id', ['default' => $auth['id']]); ?>
                         </div>
                         
                         <div class="form-group">

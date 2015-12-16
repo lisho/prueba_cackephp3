@@ -77,14 +77,15 @@
                                  <div class="form-group">
                                      <div class="thumbnail">
                                          <h4 class="rojo_subrayado">Foto actual:</h4>
-                                     <div class="img-contenedor text-center">
+                                         <div class="img-contenedor text-center">
                                              <?= $this->element('UserElements/avatar'); ?>
                                         </div>
                                     
                                 <?= $this->Form->input('foto', [
                                                             'type'=>'file',
-                                                            'label'=>'Selecciona un archivo nuevo para cambiar la foto de este perfil:']); ?>  
-                                </div> </div>
+                                                          'label'=>'Selecciona un archivo nuevo para cambiar la foto de este perfil:']); ?>  
+                                    
+                                </div> 
                             </div>
 
                     </fieldset>
